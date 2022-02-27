@@ -168,7 +168,7 @@ export default function NavMenu() {
           </NavLink>
         </li>
         <li className='github'>
-        <a href="https://github.com/AlecTufenkjian/This-is-ALEC" target="_blank">
+        <a href="https://github.com/AlecTufenkjian/This-is-ALEC" target="_blank" rel="noreferrer noopener">
           <MarkGitHub height={25} width={25}/>
         </a>
           
