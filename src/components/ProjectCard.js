@@ -1,9 +1,7 @@
-import styled from 'styled-components';
-
 export const ProjectCard = (props) => {
     return(
             <div className='card'>
-                <img className='card-img-top' src={'https://picsum.photos/400/200'} />
+                <img className='card-img-top' src={'https://picsum.photos/400/200'} alt="project"/>
                 <div className='card-body'>
                     <div className='card-title'>{props.title}</div>
                     <p>
