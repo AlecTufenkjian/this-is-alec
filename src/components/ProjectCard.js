@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const ProjectCard = (props) => {
     return(
             <div className='card'>

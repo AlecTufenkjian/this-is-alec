@@ -1,5 +1,6 @@
 import { ProjectCard } from './ProjectCard'
 import styled from 'styled-components';
+import JsonProjectsData from '../assets/content/projects.json';
 
 const CardStyle = styled.div`
     .card{
@@ -89,15 +90,17 @@ export default function ProjectSection() {
     <HighlightedProjectSectionStyle>
       <CardStyle>
         <div className='cards'>
-          <ProjectCard title='purus sit amet' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' category='purus' img='https://picsum.photos/400/200'/>
-          <ProjectCard title='purus sit amet' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' category='purus' img='https://picsum.photos/400/200'/>
-          <ProjectCard title='purus sit amet' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' category='purus' img='https://picsum.photos/400/200'/>
-          <ProjectCard title='purus sit amet' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' category='purus' img='https://picsum.photos/400/200'/>
-          <ProjectCard title='purus sit amet' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' category='purus' img='https://picsum.photos/400/200'/>
-          <ProjectCard title='purus sit amet' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' category='purus' img='https://picsum.photos/400/200'/>
-          <ProjectCard title='purus sit amet' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' category='purus' img='https://picsum.photos/400/200'/>
-          <ProjectCard title='purus sit amet' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' category='purus' img='https://picsum.photos/400/200'/>
-          <ProjectCard title='purus sit amet' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' category='purus' img='https://picsum.photos/400/200'/>
+
+            {JsonProjectsData.projects.map((project, idx) => (
+              <ProjectCard
+                key={idx} 
+                title={project.title} 
+                description={project.description}
+                category={project.tags[0]}
+                img='https://picsum.photos/400/200'
+              />
+            ))}
+
         </div>
       </CardStyle>
     </HighlightedProjectSectionStyle>

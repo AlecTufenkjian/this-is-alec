@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import JsonProjectsData from '../assets/content/projects.json'
 
 const HighlightedProjectSectionStyle = styled.div`
   .container {
@@ -182,76 +183,37 @@ const HighlightedProjectSectionStyle = styled.div`
 
 
 export default function HighlightedProjectSection() {
-  // console.log(projects);
   return (
     <HighlightedProjectSectionStyle>
       <section id="projects">
         <div className="container">
           <h2 className="section-heading" data-outline="Projects">Projects</h2>
           <div className="all-items">
-            <div className="item">
-              <div className="left">
-                <div className="img">
-                  <img src={"https://picsum.photos/450/500"} alt="" />
-                </div>
-              </div>
-              <div className="right">
-                <h2 className="project-title">quis varius quam</h2>
-                <h3 className="project-sub-title">quis varius quam</h3>
-                <p className="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices dui sapien eget mi proin sed libero. Aliquam faucibus purus in massa tempor nec feugiat nisl pretium.</p>
-                <div className="buttons">
-                  <a href="#" className="primary-btn outline external-link"> <span>Try it out!</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                </div>
 
-              </div>
-            </div>
-            <div className="item">
-              <div className="left">
-                <div className="img">
-                <img src={"https://picsum.photos/450/500"} alt="" />
+            {JsonProjectsData.projects.map((project, idx) => (
+              <div className="item" key={`${idx}`}>
+                <div className="left">
+                  <div className="img">
+                    <img src={"https://picsum.photos/450/500"} alt="" />
+                  </div>
+                </div>
+                <div className="right">
+                  <h2 className="project-title">{project.title}</h2>
+                  <h3 className="project-sub-title">{project.subtitle}</h3>
+                  <p className="project-desc">{project.description}</p>
+                  <div className="buttons">
+                    <a href="#" className="primary-btn outline external-link"> <span>Try it out!</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  </div>
+
                 </div>
               </div>
-              <div className="right">
-                <h2 className="project-title">quis varius quam
-                </h2>
-                <h3 className="project-sub-title">quis varius quam
-                </h3>
-                <p className="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices dui sapien eget mi proin sed libero. Aliquam faucibus purus in massa tempor nec feugiat nisl pretium.</p>
-                <div className="buttons">
-                  <a href="#" className="primary-btn outline external-link"> <span>Try it out!</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="item">
-              <div className="left">
-                <div className="img">
-                <img src={"https://picsum.photos/450/500"} alt="" />
-                </div>
-              </div>
-              <div className="right">
-                <h2 className="project-title">quis varius quam</h2>
-                <h3 className="project-sub-title">quis varius quam</h3>
-                <p className="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices dui sapien eget mi proin sed libero. Aliquam faucibus purus in massa tempor nec feugiat nisl pretium.</p>
-                <div className="buttons">
-                  <a href="#" className="primary-btn outline external-link"> <span>Try it out!</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
+            ))}
+            
           </div>
         </div>
       </section>
