@@ -41,6 +41,7 @@ const ContactSectionStyle = styled.div`
 
   em{
     font-style: normal; 
+    font-weight: 500;
     color: var(--light-blue);
   }
   }
@@ -100,7 +101,16 @@ export default function ContactSection() {
               <div className='letter'>
                 Hello stranger!<br/><br/>
 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras semper auctor neque vitae tempus quam pellentesque nec. Mus mauris vitae ultricies leo integer malesuada.
+                If you liked my website, have a comment or want to meet me, please <em>reach out!</em>
+                <br/><br/>
+                
+                Anything you <em>send</em> via this form will immediately notify me on <em>discord</em>.
+                <br/><br/>
+
+                It's totally fine if you do not want to share your name or your <em>contact info</em>.
+                <br/><br/>
+
+                Thanks!
 
               </div>
             </div>

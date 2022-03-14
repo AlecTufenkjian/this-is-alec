@@ -97,7 +97,7 @@ export default function ProjectSection() {
                 title={project.title} 
                 description={project.description}
                 category={project.tags[0]}
-                img='https://picsum.photos/400/200'
+                img='https://picsum.photos/id/379/400/200'
               />
             ))}
 

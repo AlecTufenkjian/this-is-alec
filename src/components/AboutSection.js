@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import JsonAboutMe from '../assets/content/aboutme.json';
 
 const AboutMeSectionStyle = styled.div`
   padding: 10rem 0;
@@ -48,7 +47,7 @@ const AboutMeSectionStyle = styled.div`
   em{
     font-style: normal; 
     color: var(--light-blue);
-    font-weight: bold;
+    font-weight: 500;
   }
 
   .img{
@@ -104,11 +103,19 @@ export default function ContactSection() {
           <div className="contactSection__wrapper">
             <div className="left">
                 <div className='letter-header'><em>Hi, I’m Alec Tufenkjian</em></div>
-                <div className='letter'>{JsonAboutMe.story}</div>    
+                <div className='letter'>
+                  I am a Software Engineering Co-op student at McGill University who is very passionate about <em>full-stack web development.</em>
+                  <br /><br />
+                  I have developed this website to demonstrate my skills and show the various projects I have worked on using <em>React.js, Node.js, Express.js, Java, Zoho deluge</em> as well as many other technologies.
+                  <br /><br />
+                  Outside school, I do a lot of freelancing as a <em>Shopify developer and a Zoho developer</em>. I write programs in node.js to solve various problems.
+                  <br /><br />
+                  If you found anything about me interesting, please reach out to me at <em>alectufenkjian@gmail.com</em> or leave me a short message by filling out the contact form.
+                </div>    
             </div>          
             <div className="right">
                 <div className="img">
-                  <img src={"https://picsum.photos/450/500"} alt="" />
+                  <img src={"https://picsum.photos/id/893/450/500"} alt="" />
                 </div>
             </div>
           </div>

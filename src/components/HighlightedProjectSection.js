@@ -22,6 +22,15 @@ const HighlightedProjectSectionStyle = styled.div`
     height: 100%;
   }
 
+  .section-subheading {
+    font-size: 1.5rem;
+    font-family: 'RobotoMono Regular';
+    letter-spacing: 0.2rem;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10rem;
+  } 
+
   .section-heading {
     font-size: clamp(2rem, 10vw, 8rem);
     text-transform: uppercase;
@@ -29,7 +38,6 @@ const HighlightedProjectSectionStyle = styled.div`
     letter-spacing: 0.2rem;
     text-align: center;
     position: relative;
-    margin-bottom: 10rem;
   } 
 
   .section-heading::before {
@@ -183,18 +191,20 @@ const HighlightedProjectSectionStyle = styled.div`
 
 
 export default function HighlightedProjectSection() {
+
+  const projects = JsonProjectsData.projects.slice(0, 3);
   return (
     <HighlightedProjectSectionStyle>
       <section id="projects">
         <div className="container">
           <h2 className="section-heading" data-outline="Projects">Projects</h2>
+          <h4 className="section-subheading"> Source code on Github!</h4>
           <div className="all-items">
-
-            {JsonProjectsData.projects.map((project, idx) => (
+            {projects.map((project, idx) => (
               <div className="item" key={`${idx}`}>
                 <div className="left">
                   <div className="img">
-                    <img src={"https://picsum.photos/450/500"} alt="" />
+                    <img src={"https://picsum.photos/id/366/450/500"} alt="" />
                   </div>
                 </div>
                 <div className="right">

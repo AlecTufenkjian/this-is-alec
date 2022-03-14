@@ -79,7 +79,7 @@ export default function ContactForm() {
       }]
     }
 
-    fetch('https://discord.com/api/webhooks/937800889345925151/1l_rpVXgyhqHJXDk3ZFeCgkdWgr9ZZgBlN-Pfkj-9-mq39oc_R5Id9rOSFWK09rOY59k', {
+    fetch('https://discord.com/api/webhooks/952737605684965467/9ANc6OaWquRK2MWUEGHirki8wlSNFpw_q972E4iIqbV6f1atGb3Jb9CTTQEjBo7fdKTI', {
       method: 'POST',
       body: JSON.stringify(content),
       headers: {
