@@ -202,7 +202,7 @@ function GithubWidget(props) {
 export default function HighlightedProjectSection() {
 
   const projects = JsonProjectsData.projects.slice(0, 3);
-  const githubLink = JsonProjectsData.projects.github;
+  
   return (
     <HighlightedProjectSectionStyle>
       <section id="projects">
