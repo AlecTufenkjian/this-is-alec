@@ -4,37 +4,55 @@
             "title": "ARoom (Award Winning)",
             "subtitle": "Svelte, Node.js, Leaflet.js - McHack 9",
             "description": "By connecting to your webcam and microphone, ARoom allows you to chat with people living near you virtually. Coupled with an augmented reality system, our application also allows you to view 3D models and images for more interactivity and fun.",
-            "tags": ["Svelte", "Node.js", "Leaflet.js"]
+            "tags": ["Svelte", "Node.js", "Leaflet.js"],
+            "github": "https://github.com/LoganTML/McHacks-2022",
+            "live": "",
+            "informationPage": ""
         },        
         {
             "title": "Maalem",
             "subtitle": "React.js, Node.js - CEGEP Project",
             "description": "Peer-to-peer student assistance web application, where users can submit questions and help others with very helpful filtering tools. Questions are displayed as swipeable cards. There is also an integrated chat system (web socket) that is activated when a user chooses to answer a question.",
-            "tags": ["React.js", "Node.js"]
+            "tags": ["React.js", "Node.js"],
+            "github": "https://github.com/AlecTufenkjian/Maalem",
+            "live": "",
+            "informationPage": ""
         },
         {
             "title": "Game of Pong",
             "subtitle": "Java, ACM - University Project",
             "description": "I have simulated in this game a moderately complex physics engine. It simulates Newton's equations of motion, allowing me to calculate the position and velocity of a simulated ping-pong ball as a function of time. It takes account of gravity, energy loss on collisions, energy gain on hits, as well as air resistance.",
-            "tags": ["Java", "ACM"]
+            "tags": ["Java", "ACM"],
+            "github": "https://github.com/AlecTufenkjian/Game-of-Pong",
+            "live": "",
+            "informationPage": ""
         },
         {
             "title": "Painting-Contracting",
             "subtitle": "Zoho Creator, Deluge - Freelance",
             "description": "This is a fully functional web application for a construction company. It allows employees to determine, describe and add images of the needed services for the client. It also automatically generates legitimate and customized contracts ready to be sent with a single click.",
-            "tags": ["Zoho", "Deluge"]
+            "tags": ["Zoho", "Deluge"],
+            "github": "https://github.com/AlecTufenkjian/Painting-Contracting",
+            "live": "",
+            "informationPage": ""
         },
         {
             "title": "Asteroids",
             "subtitle": "Java, Slick2D - CEGEP Project",
             "description": "This is my recreation of the famous/old game \"Asteroids\"I had a lot of fun working on this game with my classmate. It solidified my understanding of Java objects, inhertance, interfaces, as well as the concept of game loops. While the slick2D library is outdated, it allowed me to learn Java OOP visually, which i'm very thankful for.",
-            "tags": ["Java", "Slick2D"]
+            "tags": ["Java", "Slick2D"],
+            "github": "https://github.com/AlecTufenkjian/Asteroids",
+            "live": "",
+            "informationPage": ""
         },    
         {
             "title": "Monopoly",
             "subtitle": "Java - CEGEP Project",
             "description": "This project is a recreation of the monopoly game in Java. The most interesting concept i learned while developing is Java serialization. Essentially it allows me to save the game progress by writing progress classes in binary files, and then reading them back when progress is loaded.",
-            "tags": ["Java"]
+            "tags": ["Java"],
+            "github": "https://github.com/AlecTufenkjian/Monopoly",
+            "live": "",
+            "informationPage": ""
         }
     ]       
 }

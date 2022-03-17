@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import JsonProjectsData from '../assets/content/projects.json'
+import { ReactComponent as MarkGitHub} from '../assets/logos/mark-github.svg';
 
 const HighlightedProjectSectionStyle = styled.div`
   .container {
@@ -189,10 +190,19 @@ const HighlightedProjectSectionStyle = styled.div`
   }
 `;
 
+function GithubWidget(props) {
+  return (
+    props.github !== '' ?                    
+    <a href={props.github} target="_blank" rel="noreferrer noopener">
+      <MarkGitHub style={{width: "30px", height: "30px"}}/>
+    </a> : '' 
+  )
+}
 
 export default function HighlightedProjectSection() {
 
   const projects = JsonProjectsData.projects.slice(0, 3);
+  const githubLink = JsonProjectsData.projects.github;
   return (
     <HighlightedProjectSectionStyle>
       <section id="projects">
@@ -211,14 +221,24 @@ export default function HighlightedProjectSection() {
                   <h2 className="project-title">{project.title}</h2>
                   <h3 className="project-sub-title">{project.subtitle}</h3>
                   <p className="project-desc">{project.description}</p>
-                  <div className="buttons">
-                    <a href="/" className="primary-btn outline external-link"> <span>Try it out!</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </a>
-                  </div>
+                  <ul className="buttons">
+                    <li>
+                      {
+                        project.live ? 
+                          <a href="/" className="primary-btn outline external-link"> <span>Try it out!</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </a> : ''
+                      }                      
+                    </li>
+
+                    <li className='github'>                    
+                        <GithubWidget github={project.github}> </GithubWidget>                                         
+                    </li>
+
+                  </ul>
 
                 </div>
               </div>
