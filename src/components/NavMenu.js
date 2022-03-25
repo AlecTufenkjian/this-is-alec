@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { MdClose, MdMenu } from 'react-icons/md';
 import { ReactComponent as MarkGitHub} from '../assets/logos/mark-github.svg';
+import { ReactComponent as MarkLinkedIn} from '../assets/logos/mark-linkedin.svg';
 
 const NavStyles = styled.nav`
   position: fixed;
@@ -14,10 +15,6 @@ const NavStyles = styled.nav`
   background: var(--dark-bg);
 
   ul {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 90%;
-    text-align: center;
     li {
       margin-right: 1rem;
       margin-left: 1rem;
@@ -58,21 +55,37 @@ const NavStyles = styled.nav`
   }
 
   @media only screen and (min-width: 769px) {
-    .github {
+
+    ul{
+      display: flex;
+      justify-content: center;
+    }
+
+    .links{
       position: absolute;
       right: 0;
+    }
+
+    .link{ 
+      padding: 0px;
+      margin-top: 12px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+      height: 30px;
+      width: 30px;
     }
   }
   @media only screen and (max-width: 768px) {
     padding: 0;
     .hide-item {
-      transform: translateY(calc(-100% - var(--top)));
+      transform: translateY(calc(-100% - 1rem));
     }
     .mobile-menu-icon {
       display: block;
     }
     .navItems {
-      --top: 1rem;
+      display: block;
       transition: 0.3s ease transform;
       background-color: var(--deep-dark);
       padding: 2rem;
@@ -81,7 +94,8 @@ const NavStyles = styled.nav`
       border-radius: 12px;
       position: absolute;
       right: 1rem;
-      top: var(--top);
+      top: 1 rem;
+      text-align: center;
       .closeNavIcon {
         display: block;
         width: 3rem;
@@ -95,6 +109,7 @@ const NavStyles = styled.nav`
         display: block;
         margin-bottom: 1rem;
       }
+
     }
   }
 `;
@@ -167,11 +182,19 @@ export default function NavMenu() {
             Contact
           </NavLink>
         </li>
-        <li className='github'>
-        <a href="https://github.com/AlecTufenkjian/This-is-ALEC" target="_blank" rel="noreferrer noopener">
-          <MarkGitHub height={25} width={25}/>
-        </a>
-          
+
+        <li className='links'>
+          <div>
+            <a href="https://www.linkedin.com/in/alec-tufenkjian/" className='link' target="_blank" rel="noreferrer noopener">
+              <MarkLinkedIn height={25} width={25}/>
+            </a>  
+
+            <a href="https://github.com/AlecTufenkjian/This-is-ALEC" className='link' target="_blank" rel="noreferrer noopener">
+              <MarkGitHub height={25} width={25}/>
+            </a>  
+
+          </div>
+
         </li>
       </ul>
     </NavStyles>

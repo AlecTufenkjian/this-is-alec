@@ -9,7 +9,13 @@ export const ProjectCard = (props) => {
                     </p>
                 </div>
                 <div className='card-footer'>
-                    {props.category}
+                    <ul className="tags">
+                        {
+                            props.category.map((tag) => (
+                                <li className="tag" key={props.category.id}>{tag}</li>
+                            ))
+                        }                        
+                    </ul>
                 </div>
             </div>
         

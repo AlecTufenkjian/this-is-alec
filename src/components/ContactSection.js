@@ -69,7 +69,6 @@ const SectionTitleStyle = styled.div`
     font-size: 2rem;
   }
   h2 {
-    font-family: 'RobotoMono Regular';
     font-size: 6rem;
     margin-top: 0.5rem;
     text-transform: uppercase;
@@ -91,8 +90,11 @@ export default function ContactSection() {
   return (
     <>
       <ContactSectionStyle>
-        <div className="container">
-          <SectionTitle heading="contact" subheading="get in touch" />
+        <div className="container">   
+          <SectionTitleStyle className="section-title">
+            <p>get in touch</p>
+            <h2>contact</h2>
+          </SectionTitleStyle>
           <div className="contactSection__wrapper">
             <div className="left">
               <ContactForm />
@@ -107,7 +109,7 @@ export default function ContactSection() {
                 Anything you <em>send</em> via this form will immediately notify me on <em>discord</em>.
                 <br/><br/>
 
-                It's totally fine if you do not want to share your name or your <em>contact info</em>.
+                It's totally fine if you do not want to share your <em>name </em> or your <em>contact info</em>.
                 <br/><br/>
 
                 Thanks!
@@ -121,14 +123,5 @@ export default function ContactSection() {
 
   );
 }
-function SectionTitle({
-  subheading = 'Need Subheading',
-  heading = 'need heading',
-}) {
-  return (
-    <SectionTitleStyle className="section-title">
-      <p>{subheading}</p>
-      <h2>{heading}</h2>
-    </SectionTitleStyle>
-  );
-}
+
+

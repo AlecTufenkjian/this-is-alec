@@ -20,6 +20,7 @@ const CardStyle = styled.div`
     }
 
     .card-title{
+        font-family: 'Montserrat SemiBold';
         font-size: 2.2em;
         font-weight: 700;
         margin-bottom: 5px;
@@ -43,6 +44,18 @@ const CardStyle = styled.div`
 
     .card-text{
         font-size: 1.4em;
+    }
+
+    .tags {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 10px; 
+    }
+    .tag {
+      padding-right: 10px;
+      padding-left: 10px;
+      border-radius: 0.6em;
+      background-color: var(--deep-dark);
     }
 
 
@@ -96,7 +109,7 @@ export default function ProjectSection() {
                 key={idx} 
                 title={project.title} 
                 description={project.description}
-                category={project.tags[0]}
+                category={project.tags}
                 img='https://picsum.photos/id/379/400/200'
               />
             ))}

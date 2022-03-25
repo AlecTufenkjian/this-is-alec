@@ -78,7 +78,6 @@ const SectionTitleStyle = styled.div`
     font-size: 2rem;
   }
   h2 {
-    font-family: 'RobotoMono Regular';
     font-size: 6rem;
     margin-top: 0.5rem;
     text-transform: uppercase;
@@ -108,7 +107,7 @@ export default function ContactSection() {
                   <br /><br />
                   I have developed this website to demonstrate my skills and show the various projects I have worked on using <em>React.js, Node.js, Express.js, Java, Zoho deluge</em> as well as many other technologies.
                   <br /><br />
-                  Outside school, I do a lot of freelancing as a <em>Shopify developer and a Zoho developer</em>. I write programs in node.js to solve various problems.
+                  Outside school, I do a lot of freelancing as a <em>Shopify developer</em> and a <em>Zoho developer</em>. I write programs in node.js to solve various problems.
                   <br /><br />
                   If you found anything about me interesting, please reach out to me at <em>alectufenkjian@gmail.com</em> or leave me a short message by filling out the contact form.
                 </div>    

@@ -25,7 +25,6 @@ const HighlightedProjectSectionStyle = styled.div`
 
   .section-subheading {
     font-size: 1.5rem;
-    font-family: 'RobotoMono Regular';
     letter-spacing: 0.2rem;
     text-align: center;
     position: relative;
@@ -35,7 +34,6 @@ const HighlightedProjectSectionStyle = styled.div`
   .section-heading {
     font-size: clamp(2rem, 10vw, 8rem);
     text-transform: uppercase;
-    font-family: 'RobotoMono Regular';
     letter-spacing: 0.2rem;
     text-align: center;
     position: relative;
@@ -50,8 +48,8 @@ const HighlightedProjectSectionStyle = styled.div`
 
     text-align: center;
     text-transform: uppercase;
-    font-family: 'RobotoMono Regular';
-    letter-spacing: 0.2rem;
+    font-family: 'Montserrat SemiBold';
+    letter-spacing: 0.4rem;
 
     color: transparent;
     /* -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.103); */
@@ -137,7 +135,7 @@ const HighlightedProjectSectionStyle = styled.div`
   }
   #projects .item .right .project-title {
     font-size: 2.5rem;
-    font-family: 'RobotoMono Regular';
+    font-family: 'Montserrat SemiBold';
     margin-bottom: 1rem;
   }
   #projects .item .right .project-sub-title {

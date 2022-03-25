@@ -39,7 +39,7 @@
         {
             "title": "Asteroids",
             "subtitle": "Java, Slick2D - CEGEP Project",
-            "description": "This is my recreation of the famous/old game \"Asteroids\"I had a lot of fun working on this game with my classmate. It solidified my understanding of Java objects, inhertance, interfaces, as well as the concept of game loops. While the slick2D library is outdated, it allowed me to learn Java OOP visually, which i'm very thankful for.",
+            "description": "This is my recreation of the famous/old game \"Asteroids\". I had a lot of fun working on this game with my classmate. It solidified my understanding of Java objects, inheritance, interfaces, as well as the concept of game loops. While the slick2D library is outdated, it allowed me to learn Java OOP visually, which i'm very thankful for.",
             "tags": ["Java", "Slick2D"],
             "github": "https://github.com/AlecTufenkjian/Asteroids",
             "live": "",
