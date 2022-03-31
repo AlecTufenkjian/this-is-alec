@@ -48,6 +48,7 @@ const ContactSectionStyle = styled.div`
   @media only screen and (max-width: 768px) {
     .contactSection__wrapper {
       flex-direction: column-reverse;
+      margin-top: 0;
     }
     .contactSection__wrapper::after {
       display: none;

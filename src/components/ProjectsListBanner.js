@@ -15,9 +15,9 @@ const ContactBannerStyles = styled.div`
     margin-bottom: 2rem;
     color: var(--white);
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 500px) {
     .contactBanner__heading {
-      font-size: 2.8rem;
+      font-size: 1.5rem;
     }
   }
 `;
