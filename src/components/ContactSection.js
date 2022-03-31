@@ -56,7 +56,7 @@ const ContactSectionStyle = styled.div`
     .left,
     .right {
       max-width: 100%;
-      padding: 0rem 0rem 2rem 2rem;
+      padding: 0rem 2rem 0rem 2rem;
     }
   }
 `;
