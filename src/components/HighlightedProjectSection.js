@@ -166,8 +166,10 @@ const HighlightedProjectSectionStyle = styled.div`
       width: 100%;
     }
     #projects .item .right {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
       margin-left: 0;
-      width: 90%;
+      width: 100%;
       margin-top: -150px;
     }
     #projects .item:nth-of-type(even) {

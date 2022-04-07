@@ -4,7 +4,7 @@
             "title": "ARoom (Award Winning)",
             "subtitle": "Svelte, Node.js, Leaflet.js - McHack 9",
             "description": "By connecting to your webcam and microphone, ARoom allows you to chat with people living near you virtually. Coupled with an augmented reality system, our application also allows you to view 3D models and images for more interactivity and fun.",
-            "tags": ["Svelte", "Node.js", "Leaflet.js"],
+            "tags": ["Svelte.js", "Node.js", "Leaflet.js"],
             "github": "https://github.com/LoganTML/McHacks-2022",
             "live": "",
             "informationPage": ""
