@@ -12,7 +12,7 @@ const NavStyles = styled.nav`
   left: 0;
   width: 100%;
   padding: 1rem 0;
-  background: var(--dark-bg);
+  background: var(--dark-gray);
 
   ul {
     li {
@@ -22,7 +22,7 @@ const NavStyles = styled.nav`
       border-radius: 8px;
       transition: 0.3s ease background-color;
       &:hover {
-        background-color: var(--gray-2);
+        background-color: var(--gunmetal);
       }
     }
     a {
@@ -63,6 +63,7 @@ const NavStyles = styled.nav`
 
     .links{
       position: absolute;
+      top: 7px;
       right: 0;
     }
 
@@ -87,7 +88,7 @@ const NavStyles = styled.nav`
     .navItems {
       display: block;
       transition: 0.3s ease transform;
-      background-color: var(--deep-dark);
+      background-color: var(--gunmetal);
       padding: 2rem;
       width: 90%;
       max-width: 300px;
@@ -147,17 +148,6 @@ export default function NavMenu() {
             tabIndex={0}
           >
             Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/about"
-            onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
-          >
-            About
           </NavLink>
         </li>
         <li>

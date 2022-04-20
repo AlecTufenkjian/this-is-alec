@@ -1,10 +1,10 @@
 import React from 'react';
-import ProjectSection from '../components/ProjectSection.js';
+import ProjectPage from '../components/ProjectPage.js';
 
-export default function Contact() {
+export default function Projects() {
   return (
     <>
-      <ProjectSection />
+      <ProjectPage />
     </>
   );
 }

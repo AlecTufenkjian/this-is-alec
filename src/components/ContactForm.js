@@ -20,7 +20,7 @@ const FormStyle = styled.form`
     font-size: 2rem;
     padding: 1.2rem;
     color: var(--white);
-    background-color: var(--gray-2);
+    background-color: #313131;
     outline: none;
     border: none;
     border-radius: 8px;
@@ -35,7 +35,7 @@ const FormStyle = styled.form`
     margin-bottom: 2rem;
   }
   button[type='submit'] {
-    background-color: var(--gray-2);
+    background-color: var(--steel-teal);
     color: var(--white);
     font-size: 2rem;
     display: inline-block;
@@ -48,7 +48,7 @@ const FormStyle = styled.form`
 
   em{
     font-style: normal; 
-    color: gray;
+    color: var(--steel-teal);
   }
 `;
 

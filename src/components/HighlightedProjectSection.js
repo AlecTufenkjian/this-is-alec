@@ -67,7 +67,7 @@ const HighlightedProjectSectionStyle = styled.div`
   .primary-btn {
     display: inline-block;
     background-color: var(--white);
-    color: var(--light-blue);
+    color: var(--mountain-meadow);
     font-size: 1.8rem;
     padding: 0.6em 1.6em;
     border-radius: 50px;
@@ -76,12 +76,12 @@ const HighlightedProjectSectionStyle = styled.div`
   .buttons .primary-btn.outline {
     background-color: transparent;
     border: 2px solid var(--white);
-    color: var(--light-blue);
+    color: var(--mountain-meadow);
   }
 
   .buttons svg {
     width: 50px;
-    color: var(--light-blue);
+    color: var(--mountain-meadow);
   }
 
   #projects {
@@ -105,7 +105,7 @@ const HighlightedProjectSectionStyle = styled.div`
   #projects .item .right {
     margin-left: -150px;
     flex: 1;
-    background-color: var(--gray-2);
+    background-color: var(--gunmetal);
     padding: 5rem 3rem;
     border-radius: 12px;
     z-index: 2;
@@ -121,7 +121,7 @@ const HighlightedProjectSectionStyle = styled.div`
     overflow: hidden;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0px 0px 20px var(--gray-2);
+    box-shadow: 0px 0px 20px var(--gunmetal);
     position: relative;
   }
 
@@ -141,10 +141,10 @@ const HighlightedProjectSectionStyle = styled.div`
   #projects .item .right .project-sub-title {
     font-size: 1.6rem;
     margin-bottom: 2rem;
-    color: var(--light-blue);
+    color: var(--mountain-meadow);
   }
   #projects .item .right .project-desc {
-    color: var(--secondary-gray);
+    color: var(--mountain-meadow);
     margin-bottom: 3rem;
   }
   #projects .item .right .external-link {

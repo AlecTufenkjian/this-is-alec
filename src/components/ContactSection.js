@@ -16,7 +16,7 @@ const ContactSectionStyle = styled.div`
     content: '';
     width: 2px;
     height: 50%;
-    background-color: var(--gray-1);
+    background-color: var(--steel-teal);
     left: 50%;
     top: 30%;
     transform: translate(-50%, -50%);
@@ -35,14 +35,10 @@ const ContactSectionStyle = styled.div`
     font-size: 1.8rem;
   }
 
-  .letter-highlight {
-    color: var(--light-blue);
-  }
-
   em{
     font-style: normal; 
     font-weight: 500;
-    color: var(--light-blue);
+    color: var(--steel-teal);
   }
   }
   @media only screen and (max-width: 768px) {

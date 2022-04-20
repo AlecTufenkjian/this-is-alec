@@ -1,122 +1,216 @@
-import { ProjectCard } from './ProjectCard'
+import React from 'react';
 import styled from 'styled-components';
+import Button from './BannerButton';
 import JsonProjectsData from '../assets/content/projects.json';
+import { SmallProjectCard } from './SmallProjectCard'
 
-const CardStyle = styled.div`
-    .card{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        background: #16171d;
-        overflow: hidden;
-        cursor: pointer;
-        transition: all ease 200ms;
-        min-width: 0;
-        word-wrap: break-word;
+import img1 from "../assets/images/aroom.jpg";
+import img2 from "../assets/images/maalem2.jpg";
+import img3 from "../assets/images/pong.png";
+import img4 from "../assets/images/painting.png";
+import img5 from "../assets/images/asteroids.jpg";
+import img6 from "../assets/images/monopoly.JPG";
+
+const images = [img1, img2, img3, img4, img5, img6];
+
+const ProjectSectionStyle = styled.div`
+    .section-container{
+        width: 100%;
+        height: 100%;
+        background: var(--steel-teal);
     }
 
-    .card:hover {
-        transform: scale(1.03);
+    .title{
+      padding-top: 5rem;
+      margin: auto;
+      width: fit-content; 
+      font-size: 3.6rem;
+      font-weight: 700;
+      padding-bottom: 5rem;
     }
 
-    .card-title{
-        font-family: 'Montserrat SemiBold';
-        font-size: 2.2em;
-        font-weight: 700;
-        margin-bottom: 5px;
-    }
-
-    .card-body{
-        flex: 1 1 auto;
-        padding: 1rem 1rem;
-    }
-
-    .card-body p{
-      font-size: 1.4em;
-    }
-
-    .card-footer{
-        border-top: 1px solid rgba(0,0,0,.125);
-        font-size: 1.4em;
-        padding: 0.5rem 1rem;
-        color: var(--light-blue);
-    }
-
-    .card-text{
-        font-size: 1.4em;
-    }
-
-    .tags {
+    .projects-container{
       display: flex;
-      flex-flow: row wrap;
-      gap: 10px; 
-    }
-    .tag {
-      padding-right: 10px;
-      padding-left: 10px;
-      border-radius: 0.6em;
-      background-color: var(--deep-dark);
+      flex-flow: row wrap;      
+      justify-content: center;
+      margin: auto;
+      gap: 30px;
+      max-width: 1200px;
+      padding-bottom: 3rem;
     }
 
+    .project{
+      position: relative;
+      flex-basis: 30%;
+      height: 400px; 
 
-    @media screen and (max-width: 575px) {
-        .card {
-            flex: 0 1 100%;
-        }    
-    } 
+      
 
-
-    @media screen and (min-width: 576px) and (max-width:900px) {
-        .card {
-            flex: 0 1 45%;
-            border-radius: 0.6em;
-        }
-    } 
-
-
-    @media screen and (min-width: 901px) {
-        .card {
-            flex: 0 1 27%;
-            border-radius: 0.6em;
-        }
+      background-color: black;
+      background-size: cover;
+      cursor: pointer;
+      
+      -webkit-box-shadow: 0 0 5px #000;
+            box-shadow: 0 0 5px #000;
     }
-`
 
-const HighlightedProjectSectionStyle = styled.div`
-  div.cards{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    column-gap: 23px;
-    row-gap: 23px;
-    font-size: 1em;
-    padding-top: 80px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
+    .overlay{
+      width: 100%;
+      height: 100%;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr 2fr 1fr;
+      opacity: 0;
+      transition: all 0.5s;
+
+      background: rgba(77, 77, 77, .9);
+      color: #FEF5DF;
+    }
+
+    .project-item {
+      padding-left: 20px;
+      letter-spacing: 3px;
+    }
+
+    .head{
+      position: absolute;
+      top:0; right: 0; left: 0; bottom: 0;
+
+      font-size: 30px;
+      line-height: 40px;
+      
+      transform: translateY(40px);
+      transition: all 0.7s;
+
+      display: none;
+
+      height: fit-content;
+    }
+
+    .hr{
+      width: 75px;
+
+      border: none;
+      border-bottom: solid 2px #FEF5DF;
+    }
+
+    .short-description{
+      position: absolute;
+      top:0; right: 0; left: 0; bottom: 0;
+
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: 1px;
+      
+      transform: translateY(120px);
+      transition: all 0.7s;
+
+      display: none;    
+      height: fit-content;
+    
+    }
+
+    .project:hover .head{
+      display: block;
+    }
+
+    .project:hover .short-description{
+      display: block;
+    }
+
+    .project:hover .overlay{
+      opacity: 1;
+    }
+
+
+    @media only screen and (max-width: 1200px) {
+      .project {
+        flex-basis: 30%;
+        height: 300px; 
+      }
+
+      .projects-container{
+        max-width: 900px;
+      }
+    }
+
+    @media only screen and (max-width: 930px) {
+      .project {
+        flex-basis: 40%;
+        height: 400px; 
+      }
+
+      .projects-container{
+        max-width: 800px;
+      }
+
+      .head, .short-description{
+        display: block;
+      }
+
+      .overlay{
+        opacity: 1;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .project {
+        flex-basis: 80%;
+        height: 400px; 
+      }
+
+      .projects-container{
+        max-width: 400px;
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      .project {
+        flex-basis: 100%;
+        height: 400px; 
+      }
+
+      .projects-container{
+        max-width: 100%;
+      }
+
+      .title{
+        font-size: 2.5rem;
+      }    
+
+    }
+
+    .projectsBanner__wrapper {
+      border-radius: 12px;
+      text-align: center;
+      padding-bottom: 5rem;
+    }
+
+
 `;
-
 
 export default function ProjectSection() {
 
   return (
-    <HighlightedProjectSectionStyle>
-      <CardStyle>
-        <div className='cards'>
-
-            {JsonProjectsData.projects.map((project, idx) => (
-              <ProjectCard
-                key={idx} 
-                title={project.title} 
-                description={project.description}
-                category={project.tags}
-                img='https://picsum.photos/id/379/400/200'
-              />
-            ))}
-
+    <ProjectSectionStyle>
+      <div className='section-container'>
+        <div className='title'>My Projects</div>
+        <div className='projects-container'>         
+            {
+              JsonProjectsData.projects.map((project, idx) => (
+                <SmallProjectCard 
+                  key = {idx}
+                  title = {project.title}
+                  img = {images[idx]}
+                />
+              ))
+            }            
         </div>
-      </CardStyle>
-    </HighlightedProjectSectionStyle>
-
+        <div className="projectsBanner__wrapper">
+          <Button btnText="View All Projects" btnLink="/projects" />
+        </div>
+      </div>
+    </ProjectSectionStyle>
   );
 }
