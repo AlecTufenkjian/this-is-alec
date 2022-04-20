@@ -1,5 +1,4 @@
 import React from 'react';
-import HighlightedProjectSection from '../components/HighlightedProjectSection';
 import HeroSection from '../components/HeroSection.js';
 import AboutSection from '../components/AboutSection.js';
 import ProjectSection from '../components/ProjectSection.js';
