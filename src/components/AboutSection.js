@@ -138,7 +138,7 @@ export default function AboutSection() {
               <a href="https://drive.google.com/file/d/1eUJ_g94m6fugcmXhp-GweswGTlEgAXb8/view?usp=sharing" target="_blank" rel="noreferrer noopener" className='resume-button'>DOWNLOAD RESUME</a>
           </div>          
           <div className="right">
-              <img className = "image" src={logo} />
+              <img className = "image" src={logo} alt="Alec"/>
           </div>
         </div>
       </div>
