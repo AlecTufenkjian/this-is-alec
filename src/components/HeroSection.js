@@ -93,28 +93,19 @@ const HeroStyle = styled.div`
       font-family: "Oswald",sans-serif;
     }
 
-    @media only screen and (max-width: 400px) {
-      .titles div::before{
-        left: 180px;
-      }
-      .title-1{
-        font-size: 1.125rem;
-      }
-      .title-2{
-        font-size: 3rem;
-      }
-    }
+
 
     .links {
 
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-    margin-top: 40px;
-    align-items: center;
-    position: absolute;
-    top: 70%;
-    margin-left: 10%;
+      height: 80px;
+      display: flex;
+      flex-direction: row;
+      margin-top: 40px;
+      align-items: center;
+      position: absolute;
+      top: 70%;
+      margin-left: 10%;
+      margin-right: 10%;
 
     .link {
 
@@ -148,6 +139,26 @@ const HeroStyle = styled.div`
       }
 
     }
+
+    }    
+    
+    @media only screen and (max-width: 400px) {
+      .titles div::before{
+        left: 180px;
+      }
+      .title-1{
+        font-size: 1.125rem;
+      }
+      .title-2{
+        font-size: 3rem;
+      }
+
+      .links{
+        margin-left: 5%;
+        margin-right: 0;
+        justify-content: center;
+      }
+
 
     }
 `;
