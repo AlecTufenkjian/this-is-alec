@@ -9,7 +9,7 @@ export const SmallProjectCard = (props) => {
             </div>
             <div className='project-item short-description'>
                 <p>
-                    This is the placeholder for the short description. It would concisly describe the project.
+                    {props.summary}
                 </p>
             </div>
       </a>  

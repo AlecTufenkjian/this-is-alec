@@ -86,11 +86,11 @@ const ProjectSectionStyle = styled.div`
       display: none;
 
       height: fit-content;
+      width: fit-content;
     }
 
     .hr{
-      width: 75px;
-
+      padding-top: 5px;
       border: none;
       border-bottom: solid 2px #FEF5DF;
     }
@@ -203,6 +203,7 @@ export default function ProjectSection() {
                   key = {idx}
                   title = {project.title}
                   img = {images[idx]}
+                  summary = {project.summary}
                 />
               ))
             }            
