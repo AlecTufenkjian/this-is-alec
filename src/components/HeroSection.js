@@ -1,5 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Links } from './Links'
+
+
+import {library} from "@fortawesome/fontawesome-svg-core";
+
+
+// Icons
+
+import {
+	faGithub,
+	faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+
+import {
+	faEnvelope,
+	faFileAlt,
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(
+  faGithub,
+	faLinkedin,
+  faEnvelope,
+	faFileAlt,
+)
+
 
 const HeroStyle = styled.div`
     .hero-container{
@@ -16,6 +41,29 @@ const HeroStyle = styled.div`
       position: absolute;
       top: 50%;
       gap: 10px;
+
+    }
+
+    .title-2{
+
+      background-image: linear-gradient(to right, #2193b0 , #6dd5ed, var(--steel-teal));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent; 
+
+      background-size: 300%;    
+
+      animation: animatedText 3s infinite alternate-reverse;
+    }
+
+    @keyframes animatedText{
+      from{
+        background-position: 0%;
+      }
+
+      to{
+        background-position: 100%;
+      }
     }
 
     .title-1{
@@ -56,6 +104,52 @@ const HeroStyle = styled.div`
         font-size: 3rem;
       }
     }
+
+    .links {
+
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    align-items: center;
+    position: absolute;
+    top: 70%;
+    margin-left: 10%;
+
+    .link {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+
+      .fa {
+        margin-left: 12px;
+        margin-right: 12px;
+      }
+
+      p {
+        visibility: hidden;
+        margin: 0;
+        font-size: 14px;
+        text-align: center;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.2s, margin 0.2s ease-in-out;
+      }
+
+      &:hover {
+
+        p {
+          margin-top: 15px;
+          visibility: visible;
+          opacity: 1;
+        }
+
+      }
+
+    }
+
+    }
 `;
 
 export default function HeroSection() {
@@ -66,6 +160,7 @@ export default function HeroSection() {
           <div className='title-1'>I AM ALEC TUFENKJIAN</div>
           <div className='title-2'>SOFTWARE ENGINEERING STUDENT</div>
         </div>
+        <Links />
       </div>
     </HeroStyle>
   );

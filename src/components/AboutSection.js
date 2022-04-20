@@ -76,13 +76,6 @@ const AboutSectionStyle = styled.div`
     border: 3px solid var(--steel-teal);
     padding: 15px;
   }
-
-  .resume-button{
-    line-height: 4.7rem;
-    font-size: 1rem;
-    padding: 1.5rem 3rem;
-    border: 1px solid var(--steel-teal);
-  }
   
   @media only screen and (min-width: 700px) and (max-width: 1150px) {
     .contactSection__wrapper {
@@ -140,7 +133,6 @@ export default function AboutSection() {
                 <br /><br />
                 If you found anything about me interesting, please reach out to me at <em>alectufenkjian@gmail.com</em> or leave me a short message by filling out the contact form.
               </div> 
-              <a href="https://drive.google.com/file/d/1eUJ_g94m6fugcmXhp-GweswGTlEgAXb8/view?usp=sharing" target="_blank" rel="noreferrer noopener" className='resume-button'>DOWNLOAD RESUME</a>
           </div>          
           <div className="right">
               <img className = "image" src={logo} alt="Alec"/>
