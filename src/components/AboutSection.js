@@ -104,8 +104,8 @@ const AboutSectionStyle = styled.div`
   @media only screen and (max-width: 700px) {
     .contactSection__wrapper {
       flex-direction: column-reverse;
-      margin-left: 5rem;
-      margin-right: 5rem;
+      margin-left: 3rem;
+      margin-right: 3rem;
     }
 
     .left{
@@ -114,6 +114,11 @@ const AboutSectionStyle = styled.div`
     }
     .right {
       display: contents;
+    }
+
+    .image{
+      border: none;
+      padding: 0px;
     }
   }
 `;
