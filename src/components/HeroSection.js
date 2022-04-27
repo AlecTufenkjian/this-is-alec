@@ -1,12 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Links } from './Links'
-
-
 import {library} from "@fortawesome/fontawesome-svg-core";
-
-
-// Icons
 
 import {
 	faGithub,
@@ -25,12 +20,13 @@ library.add(
 	faFileAlt,
 )
 
-
 const HeroStyle = styled.div`
     .hero-container{
         width: 100%;
-        height: 700px;
+        height: 100%;
         background-color: var(--black);
+        padding-top: 300px;
+        padding-bottom: 300px;
     }
 
     .titles{
@@ -38,8 +34,7 @@ const HeroStyle = styled.div`
       flex-flow: column;
       margin-left: 10%;
       margin-right: 10%;
-      position: absolute;
-      top: 50%;
+      margin-bottom: 40px;
       gap: 10px;
 
     }
@@ -73,12 +68,8 @@ const HeroStyle = styled.div`
       word-spacing: 10px;
     }
 
-    .titles div::before{
-      
+    .titles div::before{   
       content: "";
-      position: absolute;
-      left: 225px;
-      top: 7px;
       width: 15%;
       max-width: 100px;
       height: 1px;
@@ -94,26 +85,20 @@ const HeroStyle = styled.div`
     }
 
 
-
     .links {
-
-      height: 80px;
+      height: 150px;
       display: flex;
       flex-direction: row;
-      margin-top: 40px;
       align-items: center;
-      position: absolute;
-      top: 70%;
       margin-left: 10%;
       margin-right: 10%;
+      margin-top: 40px;
 
     .link {
-
+      width: 100px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      
-
       .fa {
         margin-left: 12px;
         margin-right: 12px;

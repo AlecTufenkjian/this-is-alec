@@ -17,7 +17,7 @@ export default function Footer() {
     <FooterStyle>
       <div className="copyright">
         <div className="container">
-            © 2022 - Developed by Alec Tufenkjian
+            © 2022 - Alec Tufenkjian
         </div>
       </div>
     </FooterStyle>
