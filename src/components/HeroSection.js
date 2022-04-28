@@ -21,84 +21,83 @@ library.add(
 )
 
 const HeroStyle = styled.div`
-    .hero-container{
-        width: 100%;
-        height: 100%;
-        background-color: var(--black);
-        padding-top: 300px;
-        padding-bottom: 300px;
+  .hero-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+  }
+
+  .titles{
+    display: flex;
+    flex-flow: column;
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 40px;
+    gap: 10px;
+  }
+
+  .titles div::before{   
+    content: "";
+    width: 15%;
+    max-width: 100px;
+    height: 1px;
+    background: #fff;
+    transition: all .3s;
+    color: white;
+  }
+
+  .title-1{
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "Heebo",sans-serif;
+    word-spacing: 10px;
+    margin-left: 1%;
+  }
+
+  .title-2{
+    background-image: linear-gradient(to right, #2193b0 , #6dd5ed, var(--steel-teal));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    background-size: 300%;    
+    animation: animatedText 3s infinite alternate-reverse;
+
+    font-weight: 700;
+    font-size: 4rem;
+    font-family: "Oswald", sans-serif;
+  }
+
+  @keyframes animatedText{
+    from{
+      background-position: 0%;
     }
 
-    .titles{
-      display: flex;
-      flex-flow: column;
-      margin-left: 10%;
-      margin-right: 10%;
-      margin-bottom: 40px;
-      gap: 10px;
-
+    to{
+      background-position: 100%;
     }
+  }
 
-    .title-2{
-
-      background-image: linear-gradient(to right, #2193b0 , #6dd5ed, var(--steel-teal));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent; 
-
-      background-size: 300%;    
-
-      animation: animatedText 3s infinite alternate-reverse;
-    }
-
-    @keyframes animatedText{
-      from{
-        background-position: 0%;
-      }
-
-      to{
-        background-position: 100%;
-      }
-    }
-
-    .title-1{
-      font-weight: 700;
-      font-size: 1.5rem;
-      font-family: "Heebo",sans-serif;
-      word-spacing: 10px;
-    }
-
-    .titles div::before{   
-      content: "";
-      width: 15%;
-      max-width: 100px;
-      height: 1px;
-      background: #fff;
-      transition: all .3s;
-      color: white;
-    }
-
-    .title-2{
-      font-weight: 700;
-      font-size: 4rem;
-      font-family: "Oswald",sans-serif;
-    }
-
-
-    .links {
-      height: 150px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-left: 10%;
-      margin-right: 10%;
-      margin-top: 40px;
+  .links {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+    width: 90%;
+    justify-content: center;
 
     .link {
       width: 100px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       .fa {
         margin-left: 12px;
         margin-right: 12px;
@@ -114,38 +113,29 @@ const HeroStyle = styled.div`
       }
 
       &:hover {
-
         p {
           margin-top: 15px;
           visibility: visible;
           opacity: 1;
         }
-
       }
-
     }
-
-    }    
+  }
     
-    @media only screen and (max-width: 400px) {
-      .titles div::before{
-        left: 180px;
-      }
-      .title-1{
-        font-size: 1.125rem;
-      }
-      .title-2{
-        font-size: 3rem;
-      }
-
-      .links{
-        margin-left: 5%;
-        margin-right: 0;
-        justify-content: center;
-      }
-
-
+  @media only screen and (max-width: 400px) {
+    .titles div::before{
+      left: 180px;
     }
+    .title-1{
+      font-size: 1.125rem;
+    }
+    .title-2{
+      font-size: 3rem;
+    }
+    .links{
+      justify-content: center;
+    }
+  }
 `;
 
 export default function HeroSection() {
