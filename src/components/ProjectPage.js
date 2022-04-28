@@ -47,7 +47,7 @@ const CardStyle = styled.div`
     .card-footer{
         border-top: 1px solid rgba(0,0,0,.125);
         font-size: 1.4em;
-        padding: 0.5rem 1rem;
+        padding: 1rem;
         color: var(--mountain-meadow);
     }
 

@@ -61,11 +61,22 @@ export default function ContactForm() {
   const handleSubmit = (evt) => {
     evt.preventDefault();
 
+    fetch('https://alectufenkjian.com/.netlify/functions/discord', {
+      method: 'POST',
+      body: JSON.stringify({}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => {
+      console.log(res);
+    })
+
+    /*
     if(message.length === 0) {
       alert("Write something!");
       return;
     }
-    console.log(message.length);
 
     const displayName = name ? name : `Anonymous`
     const content = {
@@ -94,7 +105,7 @@ export default function ContactForm() {
     })
     .catch((error) => {
       alert("We weren't able to send the message! Please try again :(");
-    });
+    });*/
       
   }
 

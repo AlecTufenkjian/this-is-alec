@@ -84,20 +84,21 @@ const HeroStyle = styled.div`
   }
 
   .links {
-    height: 150px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 40px;
-    width: 90%;
     justify-content: center;
 
-    .link {
-      width: 100px;
+    width: 90%;
+    height: 150px;
+    margin-top: 40px;
+
+    .link {   
       display: flex;
       flex-direction: column;
       justify-content: center;
-
+      width: 100px;
+      
       .fa {
         margin-left: 12px;
         margin-right: 12px;
