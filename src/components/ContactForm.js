@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
 
 const FormStyle = styled.form`
   width: 100%;
@@ -54,13 +55,18 @@ const FormStyle = styled.form`
 
 
 export default function ContactForm() {
+
+
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = (evt) => {
-    evt.preventDefault();
+    evt.preventDefault(); 
 
+
+    
     fetch('https://alectufenkjian.com/.netlify/functions/discord', {
       method: 'POST',
       body: JSON.stringify({}),
