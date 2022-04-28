@@ -15,7 +15,7 @@ exports.handler = async function(event, context) {
     }
 
     axios.post('https://discord.com/api/webhooks/969046291134951484/BcoybJydG0L6kO8eNDTpJvbAU6KNhM0dxX92g0NB1zPtJAWgGAk3iaUeTE7R89wcQITd', {
-      message: content,
+      body: JSON.stringify(content),
     })
 
     return {
