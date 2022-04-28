@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 exports.handler = async function(event, context) {
     const displayName = `Anonymous`;
 
@@ -12,21 +14,14 @@ exports.handler = async function(event, context) {
       }]
     }
 
-    fetch('https://discord.com/api/webhooks/969046291134951484/BcoybJydG0L6kO8eNDTpJvbAU6KNhM0dxX92g0NB1zPtJAWgGAk3iaUeTE7R89wcQITd', {
-      method: 'POST',
-      body: JSON.stringify(content),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+    axios.post('https://discord.com/api/webhooks/969046291134951484/BcoybJydG0L6kO8eNDTpJvbAU6KNhM0dxX92g0NB1zPtJAWgGAk3iaUeTE7R89wcQITd', {
+      message: content,
     })
 
     return {
         statusCode: 200,
         body: JSON.stringify({ message: "Success" }),
     };
-
-
-
 
 }
 
