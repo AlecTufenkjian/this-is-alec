@@ -23,7 +23,7 @@ exports.handler = async function(event, context) {
    };
   
   
-    axios(config)
+    return axios(config)
       .then(res => {
         console.log(res);
         console.log(res.data);    
