@@ -1,6 +1,10 @@
 const axios = require('axios');
 
 exports.handler = async function(event, context) {
+
+  console.log(event);
+  console.log(context);
+
     const displayName = `Anonymous`;
 
     const content = {
@@ -26,7 +30,7 @@ exports.handler = async function(event, context) {
             console.log(res);      
             return {
                 statusCode: 200,
-                body: JSON.stringify({ message: event }),
+                body: JSON.stringify({ message: context }),
             };
         })
         .catch(err => {
