@@ -2,18 +2,17 @@ const axios = require('axios');
 
 exports.handler = async function(event, context) {
 
-  console.log(event);
-  console.log(context);
+    const form = JSON.parse(event.body);
 
-    const displayName = `Anonymous`;
+    const displayName = res.title ? res.title : `Anonymous`;
 
     const content = {
-      "content": "eff",
+      "content": "",
       "embeds": [{
         "title": `A message from: ${displayName}`,
-        "description": `message`,
+        "description": form.message,
         "footer": {
-          "text": `email`
+          "text": form.email
         }
       }]
     }
@@ -30,13 +29,13 @@ exports.handler = async function(event, context) {
             console.log(res);      
             return {
                 statusCode: 200,
-                body: JSON.stringify({ message: context }),
+                body: "Success!",
             };
         })
         .catch(err => {
                 console.log(err);
                 return {
-                    statusCode: 200,
+                    statusCode: 400,
                     body: JSON.stringify({ message: "Something went wrong!" }),
                 };
         });

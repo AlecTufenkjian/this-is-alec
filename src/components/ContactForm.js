@@ -55,8 +55,6 @@ const FormStyle = styled.form`
 
 export default function ContactForm() {
 
-
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -69,14 +67,12 @@ export default function ContactForm() {
       return;
     }
 
-    const displayName = name ? name : `Anonymous`;
-
     fetch('https://alectufenkjian.com/.netlify/functions/discord', {
       method: 'POST',
       body: JSON.stringify({
-        "title": displayName,
+        "title": name,
         "message": message,
-        "contact": email
+        "email": email
       }),
       headers: {
         'Content-Type': 'application/json'
