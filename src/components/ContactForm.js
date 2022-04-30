@@ -64,54 +64,29 @@ export default function ContactForm() {
   const handleSubmit = (evt) => {
     evt.preventDefault(); 
 
-
-    
-    fetch('https://alectufenkjian.com/.netlify/functions/discord', {
-      method: 'POST',
-      body: JSON.stringify({}),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(res => {
-      console.log(res);
-    })
-
-    /*
     if(message.length === 0) {
       alert("Write something!");
       return;
     }
 
-    const displayName = name ? name : `Anonymous`
-    const content = {
-      "content": "",
-      "embeds": [{
-        "title": `A message from: ${displayName}`,
-        "description": `${message}`,
-        "footer": {
-          "text": `${email}`
-        }
-      }]
-    }
+    const displayName = name ? name : `Anonymous`;
 
-    fetch('https://discord.com/api/webhooks/952737605684965467/9ANc6OaWquRK2MWUEGHirki8wlSNFpw_q972E4iIqbV6f1atGb3Jb9CTTQEjBo7fdKTI', {
+    fetch('https://alectufenkjian.com/.netlify/functions/discord', {
       method: 'POST',
-      body: JSON.stringify(content),
+      body: JSON.stringify({
+        "title": displayName,
+        "message": message,
+        "contact": email
+      }),
       headers: {
         'Content-Type': 'application/json'
       }
     })
-    .then(res => {
+    .then(() => {     
       setName("");
       setEmail("");
       setMessage("");
-      alert("Message successfully sent! I will read it as soon as I pick up my phone :)");
     })
-    .catch((error) => {
-      alert("We weren't able to send the message! Please try again :(");
-    });*/
-      
   }
 
   return (
