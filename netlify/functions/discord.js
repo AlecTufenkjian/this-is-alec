@@ -4,7 +4,7 @@ exports.handler = async function(event, context) {
 
     const form = JSON.parse(event.body);
 
-    const displayName = res.title ? res.title : `Anonymous`;
+    const displayName = form.title ? form.title : `Anonymous`;
 
     const content = {
       "content": "",
