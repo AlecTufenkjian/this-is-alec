@@ -19,14 +19,13 @@ exports.handler = async function(event, context) {
   
     var config = {
       method: 'POST',
-      url: 'https://discord.com/api/webhooks/969046291134951484/BcoybJydG0L6kO8eNDTpJvbAU6KNhM0dxX92g0NB1zPtJAWgGAk3iaUeTE7R89wcQITd',
+      url: `https://discord.com/api/webhooks/${process.env.DISCORD_SECRET}`,
       headers: { "Content-Type": "application/json" },
       data: content,
    };
   
     return axios(config)
-        .then(res => {
-            console.log(res);      
+        .then( () => {     
             return {
                 statusCode: 200,
                 body: "Success!",

@@ -78,7 +78,8 @@ export default function ContactForm() {
         'Content-Type': 'application/json'
       }
     })
-    .then(() => {     
+    .then((res) => {
+      console.log(res);     
       setName("");
       setEmail("");
       setMessage("");
