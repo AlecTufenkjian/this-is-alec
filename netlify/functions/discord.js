@@ -28,14 +28,13 @@ exports.handler = async function(event, context) {
         .then( () => {     
             return {
                 statusCode: 200,
-                body: "Success!",
+                body: "Success!"
             };
         })
-        .catch(err => {
-                console.log(err);
+        .catch( () => {
                 return {
                     statusCode: 400,
-                    body: JSON.stringify({ message: "Something went wrong!" }),
+                    body: "Something went wrong!"
                 };
         });
 }

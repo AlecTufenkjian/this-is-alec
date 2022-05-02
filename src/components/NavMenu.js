@@ -2,8 +2,19 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { MdClose, MdMenu } from 'react-icons/md';
-import { ReactComponent as MarkGitHub} from '../assets/logos/mark-github.svg';
-import { ReactComponent as MarkLinkedIn} from '../assets/logos/mark-linkedin.svg';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { Link } from '../components/Link'
+import DATA from '../assets/content/links.json';
+
+import {
+	faGithub,
+	faLinkedin
+} from "@fortawesome/free-brands-svg-icons";
+
+library.add(
+  faGithub,
+	faLinkedin
+)
 
 const NavStyles = styled.nav`
   position: fixed;
@@ -54,29 +65,24 @@ const NavStyles = styled.nav`
     display: none;
   }
 
-  @media only screen and (min-width: 769px) {
-
-    ul{
-      display: flex;
-      justify-content: center;
-    }
-
-    .links{
-      position: absolute;
-      top: 7px;
-      right: 0;
-    }
-
-    .link{ 
-      padding: 0px;
-      margin-top: 12px;
-      margin-bottom: 10px;
-      margin-right: 10px;
-      margin-left: 10px;
-      height: 30px;
-      width: 30px;
-    }
+  .links{
+    position: absolute;
+    right: 0;
   }
+
+  .fa-2x {
+    font-size: 1.5em;
+  }
+
+  .link-sub{
+    display: none;
+  }
+
+  ul{
+    display: flex;
+    justify-content: center;
+  }
+
   @media only screen and (max-width: 768px) {
     padding: 0;
     .hide-item {
@@ -95,7 +101,7 @@ const NavStyles = styled.nav`
       border-radius: 12px;
       position: absolute;
       right: 1rem;
-      top: 1 rem;
+      top: 1rem;
       text-align: center;
       .closeNavIcon {
         display: block;
@@ -111,9 +117,28 @@ const NavStyles = styled.nav`
         margin-bottom: 1rem;
       }
 
+      .links{
+        position: initial;
+      }
+
     }
   }
 `;
+
+const links = [
+  {
+      key: 1,
+      name: "LinkedIn",
+      link: DATA.LINK_LINKEDIN,
+      icon: ['fab', 'linkedin'],
+  },
+  {
+      key: 2,
+      name: "GitHub",
+      link: DATA.LINK_GITHUB,
+      icon: ['fab', 'github'],
+  }
+]
 
 export default function NavMenu() {
   const [showNav, setShowNav] = useState(false);
@@ -174,17 +199,11 @@ export default function NavMenu() {
         </li>
 
         <li className='links'>
-          <div>
-            <a href="https://www.linkedin.com/in/alec-tufenkjian/" className='link' target="_blank" rel="noreferrer noopener">
-              <MarkLinkedIn height={25} width={25}/>
-            </a>  
-
-            <a href="https://github.com/AlecTufenkjian/This-is-ALEC" className='link' target="_blank" rel="noreferrer noopener">
-              <MarkGitHub height={25} width={25}/>
-            </a>  
-
-          </div>
-
+            {
+              links.map( (link) => 
+                <Link key={link.key} name={link.name} link={link.link} icon={link.icon} copy={link.copy} size="2x"/>
+              )
+            }
         </li>
       </ul>
     </NavStyles>

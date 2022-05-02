@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Links } from './Links'
-import {library} from "@fortawesome/fontawesome-svg-core";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { Link } from '../components/Link'
+import DATA from '../assets/content/links.json';
 
 import {
 	faGithub,
-	faLinkedin,
+	faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
 	faEnvelope,
-	faFileAlt,
+	faFileAlt
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -139,7 +140,36 @@ const HeroStyle = styled.div`
   }
 `;
 
+const links = [
+  {
+      key: 1,
+      name: "Resume",
+      link: DATA.LINK_RESUME,
+      icon: ['fas', 'file-alt']
+  },
+  {
+      key: 2,
+      name: "LinkedIn",
+      link: DATA.LINK_LINKEDIN,
+      icon: ['fab', 'linkedin'],
+  },
+  {
+      key: 3,
+      name: "GitHub",
+      link: DATA.LINK_GITHUB,
+      icon: ['fab', 'github'],
+  },
+  {
+      key: 4,
+      name: "Email",
+      link: null,
+      copy: DATA.EMAIL,
+      icon: ['fas', 'envelope'],
+  }
+]
+
 export default function HeroSection() {
+
   return (
     <HeroStyle>
       <div className='hero-container'>
@@ -147,7 +177,13 @@ export default function HeroSection() {
           <div className='title-1'>I AM ALEC TUFENKJIAN</div>
           <div className='title-2'>SOFTWARE ENGINEERING STUDENT</div>
         </div>
-        <Links />
+        <div className="links">
+          {
+            links.map( (link) => 
+              <Link key={link.key} name={link.name} link={link.link} icon={link.icon} copy={link.copy} size="4x"/>
+            )
+          }
+        </div>
       </div>
     </HeroStyle>
   );

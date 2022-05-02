@@ -67,7 +67,7 @@ export default function ContactForm() {
       return;
     }
 
-    fetch('https://alectufenkjian.com/.netlify/functions/discord', {
+    fetch('.netlify/functions/discord', {
       method: 'POST',
       body: JSON.stringify({
         "title": name,
@@ -78,8 +78,7 @@ export default function ContactForm() {
         'Content-Type': 'application/json'
       }
     })
-    .then((res) => {
-      console.log(res);     
+    .then( () => { 
       setName("");
       setEmail("");
       setMessage("");
