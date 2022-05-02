@@ -66,6 +66,9 @@ const NavStyles = styled.nav`
   }
 
   .links{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
     position: absolute;
     right: 0;
   }
