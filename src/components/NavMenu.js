@@ -65,16 +65,8 @@ const NavStyles = styled.nav`
     display: none;
   }
 
-  .links{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    position: absolute;
-    right: 0;
-  }
-
   .fa-2x {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   .link-sub{
@@ -86,6 +78,15 @@ const NavStyles = styled.nav`
     justify-content: center;
   }
 
+  .github-link{
+    position: absolute;
+    right: 0px;
+  }
+
+  .linkedin-link{
+    position: absolute;
+    right: 80px;
+  }
   @media only screen and (max-width: 768px) {
     padding: 0;
     .hide-item {
@@ -119,11 +120,11 @@ const NavStyles = styled.nav`
         display: block;
         margin-bottom: 1rem;
       }
+    }
 
-      .links{
-        position: initial;
-      }
-
+    .linkedin-link, .github-link{
+      position: initial;
+      display: inline-block !important;
     }
   }
 `;
@@ -200,14 +201,25 @@ export default function NavMenu() {
             Contact
           </NavLink>
         </li>
-
-        <li className='links'>
-            {
-              links.map( (link) => 
-                <Link key={link.key} name={link.name} link={link.link} icon={link.icon} copy={link.copy} size="2x"/>
-              )
-            }
+        <li>
+          <NavLink
+            to="/blog"
+            onClick={() => setShowNav(!showNav)}
+            role="button"
+            onKeyDown={() => setShowNav(!showNav)}
+            tabIndex={0}
+          >
+            Blog
+          </NavLink>
         </li>
+ 
+        <li className='linkedin-link'>
+          <Link key={links[0].key} name={links[0].name} link={links[0].link} icon={links[0].icon} copy={links[0].copy} size="2x"/>
+        </li> 
+
+        <li className='github-link'>
+          <Link key={links[1].key} name={links[1].name} link={links[1].link} icon={links[1].icon} copy={links[1].copy} size="2x"/>
+        </li>              
       </ul>
     </NavStyles>
   );

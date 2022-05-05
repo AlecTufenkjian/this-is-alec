@@ -1,0 +1,52 @@
+{
+    "blogs": [
+        {
+            "title": "Roger Roy",
+            "content": "Developed a custom inventory management software, synced with Shopify. I also constantly maintain and improve the store.",
+            "tags": ["Shopify", "Node.js"],
+            "date": "April 2022"
+        },
+        {
+            "title": "This is Alec",
+            "content": "This is my personal website built with React.js. I have developed this website to demonstrate my skills and show the various projects I have worked on using React.js, Node.js, Express.js, Java, Zoho deluge as well as many other technologies.",
+            "tags": ["React.js", "CSS", "Serverless"],
+            "date": "February 2022"
+        },
+        {
+            "title": "ARoom",
+            "content": "By connecting to your webcam and microphone, ARoom allows you to chat with people living near you virtually. Coupled with an augmented reality system, our application also allows you to view 3D models and images for more interactivity and fun.",
+            "tags": ["Svelte.js", "Node.js", "Web Socket"],
+            "date": "January 2022"
+        },
+        {
+            "title": "Pong",
+            "content": "I have simulated in this game a moderately complex physics engine. It simulates Newton's equations of motion, allowing me to calculate the position and velocity of a simulated ping-pong ball as a function of time. It takes account of gravity, energy loss on collisions, energy gain on hits, as well as air resistance.",
+            "tags": ["Java", "ACM", "OOP"],
+            "date": "November 2021"
+        },
+        {
+            "title": "Maalem",
+            "content": "Peer-to-peer student assistance web application, where users can submit questions and help others with very helpful filtering tools. Questions are displayed as swipeable cards. There is also an integrated chat system (web socket) that is activated when a user chooses to answer a question.",
+            "tags": ["React.js", "Node.js", "Web Socket"],
+            "date": "June 2021"
+        },
+        {
+            "title": "Painting & Contracting",
+            "content": "This is a fully functional web application for a construction company. It allows employees to determine, describe and add images of the needed services for the client. It also automatically generates legitimate and customized contracts ready to be sent with a single click.",
+            "tags": ["Zoho Creator", "CRM", "Deluge"],
+            "date": "December 2020"
+        },
+        {
+            "title": "Asteroids",
+            "content": "This is my recreation of the famous/old game \"Asteroids\". This project solidified my understanding of Java objects, inheritance, interfaces, as well as the concept of game loops. While the slick2D library is outdated, it allowed me to learn Java OOP visually, which I'm very thankful for.",
+            "tags": ["Java", "Slick2D", "OOP"],
+            "date": "November 2020"
+        },
+        {
+            "title": "Monopoly",
+            "content": "This project is a recreation of the monopoly game in Java. The most interesting concept I learned while developing is Java serialization. Essentially it allows me to save the game progress by writing progress classes in binary files, and then reading them back when progress is loaded.",
+            "tags": ["Java", "Serialization", "OOP"],
+            "date": "May 2020"
+        }
+    ]
+}

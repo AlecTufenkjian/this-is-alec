@@ -5,11 +5,11 @@ import JsonProjectsData from '../assets/content/projects.json';
 import { SmallProjectCard } from './SmallProjectCard'
 
 import img1 from "../assets/images/aroom.jpg";
-import img2 from "../assets/images/maalem2.jpg";
+import img2 from "../assets/images/maalem.jpg";
 import img3 from "../assets/images/pong.png";
 import img4 from "../assets/images/painting.png";
 import img5 from "../assets/images/asteroids.jpg";
-import img6 from "../assets/images/monopoly.JPG";
+import img6 from "../assets/images/monopoly.jpg";
 
 const images = [img1, img2, img3, img4, img5, img6];
 
