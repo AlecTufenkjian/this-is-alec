@@ -9,7 +9,8 @@
             "github": "https://github.com/LoganTML/McHacks-2022",
             "live": "",
             "informationPage": "",
-            "img": "aroom.jpg"
+            "img": "aroom.jpg",
+            "id": "aroom"
         },        
         {
             "title": "Maalem",
@@ -20,7 +21,8 @@
             "github": "https://github.com/AlecTufenkjian/Maalem",
             "live": "",
             "informationPage": "",
-            "img": "aroom.jpg"
+            "img": "aroom.jpg",
+            "id": "maalem"
         },
         {
             "title": "Pong",
@@ -31,7 +33,8 @@
             "github": "https://github.com/AlecTufenkjian/Game-of-Pong",
             "live": "",
             "informationPage": "",
-            "img": "aroom.jpg"
+            "img": "aroom.jpg",
+            "id": "pong"
         },
         {
             "title": "Contracting",
@@ -42,7 +45,8 @@
             "github": "https://github.com/AlecTufenkjian/Painting-Contracting",
             "live": "",
             "informationPage": "",
-            "img": "aroom.jpg"
+            "img": "aroom.jpg",
+            "id": "painting"
         },
         {
             "title": "Asteroids",
@@ -53,7 +57,8 @@
             "github": "https://github.com/AlecTufenkjian/Asteroids",
             "live": "",
             "informationPage": "",
-            "img": "aroom.jpg"
+            "img": "aroom.jpg",
+            "id": "asteroids"
             
         },    
         {
@@ -65,7 +70,8 @@
             "github": "https://github.com/AlecTufenkjian/Monopoly",
             "live": "",
             "informationPage": "",
-            "img": "aroom.jpg"
+            "img": "aroom.jpg",
+            "id": "monopoly"
         }
     ]       
 }

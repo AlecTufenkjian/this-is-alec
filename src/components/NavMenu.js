@@ -203,7 +203,7 @@ export default function NavMenu() {
         </li>
         <li>
           <NavLink
-            to="/blog"
+            to="/blogs"
             onClick={() => setShowNav(!showNav)}
             role="button"
             onKeyDown={() => setShowNav(!showNav)}

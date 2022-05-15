@@ -115,11 +115,13 @@ export default function ProjectPage() {
 
             {JsonProjectsData.projects.map((project, idx) => (
               <ProjectCard
-                key={idx} 
+                key={project.id}
+                id={project.id} 
                 title={project.title} 
                 description={project.description}
                 category={project.tags}
                 img={images[idx]}
+                link={project.id}
               />
             ))}
 

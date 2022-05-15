@@ -60,6 +60,19 @@ const BlogCardStyle = styled.div`
         margin-left: 5px;
     }
     
+    .blog-link{
+        width: fit-content;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        a{
+            background: white;
+            color: black;
+            padding: 0.7em 2em;
+            border-radius: 1em;
+        }
+    }
 
     @media only screen and (max-width: 700px) {
         .blog-card{
@@ -74,12 +87,12 @@ const BlogCardStyle = styled.div`
     }
 `;
 
-export default function Blog() {
+export default function Blogs() {
   return (
     <BlogCardStyle>
         <div className='blogs'>
             {BlogData.blogs.map( blog => (
-                <BlogCard title={blog.title} content={blog.content} tags={blog.tags} date={blog.date}/>
+                <BlogCard key={blog.id} title={blog.title} content={blog.content} tags={blog.tags} date={blog.date} link={blog.id}/>
             ))}
         </div>            
     </BlogCardStyle>

@@ -4,7 +4,7 @@ import NavMenu from './components/NavMenu';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
-import Blog from './pages/Blog';
+import Blogs from './pages/Blogs';
 import BlogPage from './pages/BlogPage';
 
 export default function App() {
@@ -15,8 +15,8 @@ export default function App() {
         <Routes>
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/blank" element={<BlogPage />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:blogId" element={<BlogPage />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </Router>

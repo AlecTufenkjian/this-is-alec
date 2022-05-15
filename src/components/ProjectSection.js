@@ -191,6 +191,7 @@ const ProjectSectionStyle = styled.div`
 `;
 
 export default function ProjectSection() {
+  const highlightedProjects = JsonProjectsData.projects.slice(0, 3);
 
   return (
     <ProjectSectionStyle>
@@ -198,12 +199,13 @@ export default function ProjectSection() {
         <div className='title'>My Projects</div>
         <div className='projects-container'>         
             {
-              JsonProjectsData.projects.map((project, idx) => (
+              highlightedProjects.map((project, idx) => (
                 <SmallProjectCard 
                   key = {idx}
                   title = {project.title}
                   img = {images[idx]}
                   summary = {project.summary}
+                  link = {project.id}
                 />
               ))
             }            
