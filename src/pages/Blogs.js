@@ -62,8 +62,7 @@ const BlogCardStyle = styled.div`
     
     .blog-link{
         width: fit-content;
-        margin: auto;
-        margin-top: 10px;
+        margin: 30px auto;
         margin-bottom: 10px;
 
         a{
