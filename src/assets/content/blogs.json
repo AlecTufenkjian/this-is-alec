@@ -1,13 +1,6 @@
 {
     "blogs": [
         {
-            "title": "Roger Roy",
-            "content": "Developed a custom inventory management software, synced with Shopify. I also constantly maintain and improve the store.",
-            "tags": ["Shopify", "Node.js"],
-            "date": "April 2022",
-            "id": "rogerroy"
-        },
-        {
             "title": "This is Alec",
             "content": "This is my personal website built with React.js. I have developed this website to demonstrate my skills and show the various projects I have worked on using React.js, Node.js, Express.js, Java, Zoho deluge as well as many other technologies.",
             "tags": ["React.js", "CSS", "Serverless"],
