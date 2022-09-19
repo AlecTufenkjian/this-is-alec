@@ -25,18 +25,20 @@ const BlogCardStyle = styled.div`
     }
 
     .blog-title {
-        font-size: 2rem;
+        font-size: 2.6rem;
         font-weight: 700;
     }
 
     .blog-date{
         color: var(--steel-teal);
+        font-size: 1.4rem;
     }
 
     .blog-content{
         margin-top: 20px;
         margin-bottom: 20px;
-        font-size: 1.3rem;      
+        font-size: 1.4rem;
+        line-height: 165%;     
     }
 
     .blog-btn{
