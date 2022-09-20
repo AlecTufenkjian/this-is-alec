@@ -1,19 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import App from './App';
 import GlobalStyles from './styles/GlobalStyle';
 import Typography from './styles/Typography';
 import Footer from './components/Footer';
 
-ReactDOM.render(
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(
   <>
     <GlobalStyles />
     <Typography />
     <App />
     <Footer />
-  </>,
-
-  document.getElementById('root')
+  </>
 );
 
 if (module.hot) {

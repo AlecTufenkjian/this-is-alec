@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+// eslint-disable-next-line 
+import React, { useEffect } from "react";
 import { useLocation } from "react-router";
 
 const ScrollToTop = (props) => {

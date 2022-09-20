@@ -1,4 +1,5 @@
-import { ProjectCard } from './ProjectCard'
+import React from 'react';
+import ProjectCard from './ProjectCard';
 import styled from 'styled-components';
 import JsonProjectsData from '../assets/content/projects.json';
 

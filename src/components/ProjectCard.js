@@ -1,6 +1,7 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const ProjectCard = (props) => {
+export default function ProjectCard(props) {
     return(      
         <div className='card' >
             <Link to={`/blogs/${props.link}`}>
