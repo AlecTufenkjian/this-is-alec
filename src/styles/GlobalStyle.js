@@ -9,12 +9,12 @@ const GlobalStyles = createGlobalStyle`
   
   :root{
     --rich-black: #0e1e25;
-    --gunmetal: #243238;
+    --gunmetal: #938581;
     --white: #ffffff;
     --black: #000000;
-    --steel-teal: #508991;
-    --mountain-meadow: #09BC8A; 
-    --dark-gray: #202020;
+    --steel-teal: #80CED7;
+    --mountain-meadow: #F7EF99; 
+    --dark-gray: #2F2F2F;
     --gray: #888;
   }
 
@@ -51,7 +51,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   ::-webkit-scrollbar {  
-    width: 2px;
+    width: 3px;
   }
 
   ::-webkit-scrollbar-track{

@@ -73,7 +73,7 @@ const AboutSectionStyle = styled.div`
     height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 3px solid var(--steel-teal);
+    border: 3px solid var(--gunmetal);
     padding: 15px;
   }
   
