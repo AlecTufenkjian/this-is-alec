@@ -25,16 +25,16 @@ exports.handler = async function(event, context) {
    };
   
     return axios(config)
-        .then( () => {     
+        .then(() => {     
             return {
                 statusCode: 200,
                 body: "Success!"
             };
         })
-        .catch( () => {
+        .catch((e) => {
                 return {
                     statusCode: 400,
-                    body: "Something went wrong!"
+                    body: JSON.stringify(e)
                 };
         });
 }
