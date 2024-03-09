@@ -67,7 +67,7 @@ export default function ContactForm() {
       return;
     }
 
-    fetch('.netlify/functions/discord', {
+    fetch('.netlify/functions/contact_me_via_discord', {
       method: 'POST',
       body: JSON.stringify({
         "title": name,

@@ -17,7 +17,7 @@ export default function Footer() {
     <FooterStyle>
       <div className="copyright">
         <div className="container">
-            © 2022 - Alec Tufenkjian
+            © {new Date().getFullYear()} - Alec Tufenkjian
         </div>
       </div>
     </FooterStyle>
