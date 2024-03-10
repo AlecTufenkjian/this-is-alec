@@ -98,7 +98,7 @@ const NavStyles = styled.nav`
     .navItems {
       display: block;
       transition: 0.3s ease transform;
-      background-color: var(--gunmetal);
+      background-color: var(--gray);
       padding: 2rem;
       width: 90%;
       max-width: 300px;

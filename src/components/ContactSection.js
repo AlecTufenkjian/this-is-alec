@@ -96,15 +96,15 @@ export default function ContactSection() {
             </div>          
             <div className="right">
               <div className='letter'>
-                Hello stranger!<br/><br/>
+                Hello there!<br/><br/>
 
-                If you liked my website, have a comment or want to meet me, please <em>reach out!</em>
+                If you enjoyed browsing my website or have any <em>feedback</em>, I'd love to <em>hear</em> from <em>you</em>!
                 <br/><br/>
                 
-                Anything you <em>send</em> via this form will immediately notify me on <em>discord</em>.
+                Feel free to drop me a message using this <em>form</em>, and it will instantly ping me on <em>Discord</em>.
                 <br/><br/>
 
-                It's totally fine if you do not want to share your <em>name </em> or your <em>contact info</em>.
+                You're welcome to share your thoughts <em>anonymously</em> if you prefer.
                 <br/><br/>
 
                 Thanks!

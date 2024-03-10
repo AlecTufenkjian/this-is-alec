@@ -31,6 +31,7 @@ const HeroStyle = styled.div`
     width: 100%;
     height: 100vh;
     background-color: var(--black);
+    border-top: 0.4rem solid var(--gunmetal);
   }
 
   .titles{

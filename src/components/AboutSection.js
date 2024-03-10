@@ -7,6 +7,7 @@ const AboutSectionStyle = styled.div`
         width: 100%;
         background: var(--dark-gray);
         padding-bottom: 10rem;
+        border-top: 0.3rem solid var(--gunmetal);
     }
     .contactSection__wrapper {
       display: flex;
@@ -82,8 +83,6 @@ const AboutSectionStyle = styled.div`
       margin-left: 15rem;
       margin-right: 15rem;
     }
-    
-
 
     .left,
     .right {
@@ -122,16 +121,23 @@ export default function AboutSection() {
       <div className='about-container'>
         <div className="contactSection__wrapper">
           <div className="left">
-              <div className='title-1'>Full-Stack Web Developer</div>
+              <div className='title-1'>Back-End Developer</div>
               <div className='title-2'>About Me</div>
               <div className='line' />
               <div className='letter'>
-                I am a Software Engineering Co-op student at McGill University who is very passionate about <em>full-stack web development.</em>
-                <br /><br />
-                I have developed this website to demonstrate my skills and show the various projects I have worked on using <em>React.js, Node.js, Express.js, Java, Zoho deluge</em> as well as many other technologies.
-                Outside school, I do a lot of freelancing as a <em>Shopify developer</em> and a <em>Zoho developer</em>. I write programs in node.js to solve various problems.
-                <br /><br />
-                If you found anything about me interesting, please reach out to me at <em>alectufenkjian@gmail.com</em> or leave me a short message by filling out the contact form.
+              Hello, and thanks for stopping by!
+              <br /> <br />
+
+              I'm an enthusiastic Software Engineering student at <em>McGill University</em>, with a knack for building robust <em>back-end solutions</em>. 
+              <br /> <br />
+
+              Having been hands-on with projects involving <em>SaaS</em>, <em>Serverless services</em>, <em>E-Commerce apps</em>, and <em>CRM solutions</em>, I've developed a solid grasp of <em>Agile</em> methodologies & Scrum practices. 
+              <br /> <br />
+
+              My toolbox includes a mix of <em>Java</em>, <em>JavaScript</em>, <em>Python</em>, <em>Ruby</em>, and cloud computing services like <em>AWS</em> and <em>GCP</em>. 
+              <br /> <br />
+
+              I'm also fluent in <em>English</em>, <em>French</em>, <em>Arabic</em>, and native in <em>Armenian</em>.
               </div> 
           </div>          
           <div className="right">
