@@ -1,6 +1,6 @@
 import React from 'react';
-import HeroSection from '../components/HeroSection.js';
-import AboutSection from '../components/AboutSection.js';
+import HeroSection from '../components/HeroSection.jsx';
+import AboutSection from '../components/AboutSection.jsx';
 
 export default function Home() { 
   return (

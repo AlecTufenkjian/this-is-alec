@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { Link } from '../components/Link'
+import { Link } from './Link'
 import DATA from '../assets/content/links.json';
 
 import {

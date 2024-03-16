@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { MdClose, MdMenu } from 'react-icons/md';
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { Link } from '../components/Link'
+import { Link } from './Link'
 import DATA from '../assets/content/links.json';
 
 import {

@@ -16,7 +16,3 @@ root.render(
     <Footer />
   </StrictMode>
 );
-
-if (module.hot) {
-  module.hot.accept();
-}

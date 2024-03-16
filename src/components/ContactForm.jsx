@@ -50,6 +50,11 @@ const FormStyle = styled.form`
     font-style: normal; 
     color: var(--steel-teal);
   }
+
+  input:hover,
+  textarea:hover {
+    cursor: pointer;
+  }
 `;
 
 
