@@ -92,7 +92,7 @@ const AboutSectionStyle = styled.div`
   @media only screen and (max-width: 700px) {
     .left,
     .right {
-      max-width: 80vw;
+      max-width: 90vw;
     }
 `;
 
