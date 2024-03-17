@@ -45,6 +45,6 @@ Link.propTypes = {
   link: PropTypes.string,
   icon: PropTypes.array.isRequired,
   name: PropTypes.string.isRequired,
-  copy: PropTypes.string.isRequired,
+  copy: PropTypes.string,
   size: PropTypes.string.isRequired
 }

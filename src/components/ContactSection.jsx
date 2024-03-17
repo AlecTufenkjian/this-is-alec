@@ -97,14 +97,14 @@ export default function ContactSection() {
                 <br />
                 <br />
                 If you enjoyed browsing my website or have any <em>feedback</em>
-                , I`&apos;`d love to <em>hear</em> from <em>you</em>!
+                , I&apos;d love to <em>hear</em> from <em>you</em>!
                 <br />
                 <br />
                 Feel free to drop me a message using this <em>form</em>, and it
                 will instantly ping me on <em>Discord</em>.
                 <br />
                 <br />
-                You`&apos;`re welcome to share your thoughts <em>anonymously</em> if
+                You&apos;re welcome to share your thoughts <em>anonymously</em> if
                 you prefer.
                 <br />
                 <br />

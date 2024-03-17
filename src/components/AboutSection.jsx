@@ -1,5 +1,8 @@
 import styled from 'styled-components';
-import logo from '../assets/images/hero.jpeg';
+import timesquare1 from '../assets/images/time-square-official.jpg';
+import timesquare2 from '../assets/images/time-square-livestream.jpg';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const AboutSectionStyle = styled.div`
   .about-container {
@@ -7,13 +10,18 @@ const AboutSectionStyle = styled.div`
     background: var(--dark-gray);
     padding-bottom: 10rem;
     border-top: 0.3rem solid var(--gunmetal);
+    display: flex;
+    justify-content: center;
   }
+
   .contactSection__wrapper {
     display: flex;
-    gap: 10rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
     padding-top: 10rem;
-    justify-content: center;
     position: relative;
+    max-width: 1300px;
   }
 
   .title-1 {
@@ -35,14 +43,10 @@ const AboutSectionStyle = styled.div`
     background-color: var(--steel-teal);
   }
 
-  .left {
-    width: 100%;
-    max-width: 500px;
-  }
+  .left,
   .right {
-    max-width: 500px;
     width: 100%;
-    border-radius: 12px;
+    max-width: 600px; /* Adjust as needed */
   }
 
   .letter {
@@ -69,81 +73,72 @@ const AboutSectionStyle = styled.div`
   }
 
   .image {
-    height: 600px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 3px solid var(--gunmetal);
-    padding: 15px;
+    width: 100%;
+    border-radius: 12px;
   }
 
-  @media only screen and (min-width: 700px) and (max-width: 1150px) {
+  @media only screen and (min-width: 1400px) {
     .contactSection__wrapper {
-      margin-left: 15rem;
-      margin-right: 15rem;
+      flex-direction: row;
     }
 
     .left,
     .right {
-      max-width: 100%;
-    }
-    .right {
-      display: none;
-    }
-  }
-
-  @media only screen and (max-width: 700px) {
-    .contactSection__wrapper {
-      flex-direction: column-reverse;
-      margin-left: 2rem;
-      margin-right: 2rem;
-    }
-
-    .left {
-      max-width: none;
-      order: 1;
-    }
-    .right {
-      display: contents;
-    }
-
-    .image {
-      border: none;
-      padding: 0px;
+      max-width: 50%;
     }
   }
 `;
 
 export default function AboutSection() {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1    
+    }
+  };
+
   return (
     <AboutSectionStyle>
       <div className="about-container">
         <div className="contactSection__wrapper">
           <div className="left">
-            <div className="title-1">Back-End Developer</div>
-            <div className="title-2">About Me</div>
-            <div className="line" />
+            <div className="title-1"> Back - End Developer </div>{' '}
+            <div className="title-2"> About Me </div> <div className="line" />
             <div className="letter">
               Hello, and thanks for stopping by!
+              <br /> <br /> 
+              I&apos;m an enthusiastic Software Engineering student at <em>McGill University</em>, with a knack for building robust <em>back-end solutions</em>. 
               <br /> <br />
-              I`&apos;`m an enthusiastic Software Engineering student at{' '}
-              <em>McGill University</em>, with a knack for building robust{' '}
-              <em>back-end solutions</em>.
+              Having been hands-on with projects involving <em>SaaS</em>, <em> Serverless services</em>, <em>E-Commerce apps</em>, and <em>CRM solutions</em>, I&apos;ve developed a solid grasp of <em>Agile</em> methodologies & Scrum practices. 
               <br /> <br />
-              Having been hands-on with projects involving <em>SaaS</em>,{' '}
-              <em>Serverless services</em>, <em>E-Commerce apps</em>, and{' '}
-              <em>CRM solutions</em>, I`&apos;`ve developed a solid grasp of{' '}
-              <em>Agile</em> methodologies & Scrum practices.
-              <br /> <br />
-              My toolbox includes a mix of <em>Java</em>, <em>JavaScript</em>,{' '}
-              <em>Python</em>, <em>Ruby</em>, and cloud computing services like{' '}
-              <em>AWS</em> and <em>GCP</em>.
-              <br /> <br />
-              I`&apos;`m also fluent in <em>English</em>, <em>French</em>,{' '}
-              <em>Arabic</em>, and native in <em>Armenian</em>.
+              My toolbox includes a mix of <em>Java</em>, <em>JavaScript</em>, <em>Python</em>, <em>Ruby</em>, and cloud computing services like <em> AWS </em> and <em>GCP</em>. <br /> <br /> I&apos;m also fluent in <em>English</em>, <em>French</em>, <em>Arabic</em>, and native in <em>Armenian</em>.
             </div>
           </div>
           <div className="right">
-            <img className="image" src={logo} alt="Alec" />
+            <Carousel
+              responsive={responsive}
+              infinite={true}
+              autoPlay={true}
+              autoPlaySpeed={4000}
+              swipeable={false}
+              draggable={false}
+              removeArrowOnDeviceType={["mobile"]}
+            >
+              <div>
+                <img className="image" src={timesquare1} alt="Time Square Official" />
+              </div>
+              <div>
+                <img className="image" src={timesquare2} alt="Time Square Livestream" />
+              </div>
+            </Carousel>
           </div>
         </div>
       </div>
