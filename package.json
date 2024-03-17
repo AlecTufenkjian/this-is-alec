@@ -12,6 +12,7 @@
         "@vitejs/plugin-react-swc": "^3.6.0",
         "axios": "^0.27.2",
         "dotenv": "^16.4.5",
+        "prop-types": "^15.8.1",
         "react": "^18.2.0",
         "react-bootstrap": "^2.10.1",
         "react-copy-to-clipboard": "^5.1.0",
@@ -30,7 +31,9 @@
         "build": "tsc && vite build",
         "serve": "vite",
         "test": "vitest",
-        "test:coverage": "vitest run --coverage --watch=false"
+        "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+        "test:coverage": "vitest run --coverage --watch=false",
+        "format": "prettier --write ./src"
     },
     "eslintConfig": {
         "extends": [
@@ -51,8 +54,15 @@
         ]
     },
     "devDependencies": {
+        "@types/prop-types": "^15.7.11",
         "@vitest/coverage-v8": "^1.4.0",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-react": "^7.34.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.6",
         "jsdom": "^24.0.0",
+        "prettier": "^3.2.5",
         "vitest": "^1.4.0"
     }
 }

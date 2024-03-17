@@ -1,20 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { MdClose, MdMenu } from 'react-icons/md';
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { Link } from './Link'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { Link } from './Link';
 import DATA from '../assets/content/links.json';
 
-import {
-	faGithub,
-	faLinkedin
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-library.add(
-  faGithub,
-	faLinkedin
-)
+library.add(faGithub, faLinkedin);
 
 const NavStyles = styled.nav`
   position: fixed;
@@ -47,7 +41,6 @@ const NavStyles = styled.nav`
     .active {
       color: var(--white);
     }
-
   }
   .mobile-menu-icon {
     position: absolute;
@@ -69,21 +62,21 @@ const NavStyles = styled.nav`
     font-size: 1.2em;
   }
 
-  .link-sub{
+  .link-sub {
     display: none;
   }
 
-  ul{
+  ul {
     display: flex;
     justify-content: center;
   }
 
-  .github-link{
+  .github-link {
     position: absolute;
     right: 0px;
   }
 
-  .linkedin-link{
+  .linkedin-link {
     position: absolute;
     right: 80px;
   }
@@ -122,7 +115,8 @@ const NavStyles = styled.nav`
       }
     }
 
-    .linkedin-link, .github-link{
+    .linkedin-link,
+    .github-link {
       position: initial;
       display: inline-block !important;
     }
@@ -131,18 +125,18 @@ const NavStyles = styled.nav`
 
 const links = [
   {
-      key: 1,
-      name: "LinkedIn",
-      link: DATA.LINK_LINKEDIN,
-      icon: ['fab', 'linkedin'],
+    key: 1,
+    name: 'LinkedIn',
+    link: DATA.LINK_LINKEDIN,
+    icon: ['fab', 'linkedin'],
   },
   {
-      key: 2,
-      name: "GitHub",
-      link: DATA.LINK_GITHUB,
-      icon: ['fab', 'github'],
-  }
-]
+    key: 2,
+    name: 'GitHub',
+    link: DATA.LINK_GITHUB,
+    icon: ['fab', 'github'],
+  },
+];
 
 export default function NavMenu() {
   const [showNav, setShowNav] = useState(false);
@@ -190,14 +184,26 @@ export default function NavMenu() {
             Contact
           </NavLink>
         </li>
- 
-        <li className='linkedin-link'>
-          <Link key={links[0].key} name={links[0].name} link={links[0].link} icon={links[0].icon} copy={links[0].copy} size="2x"/>
-        </li> 
 
-        <li className='github-link'>
-          <Link key={links[1].key} name={links[1].name} link={links[1].link} icon={links[1].icon} copy={links[1].copy} size="2x"/>
-        </li>              
+        <li className="linkedin-link">
+          <Link
+            key={links[0].key}
+            name={links[0].name}
+            link={links[0].link}
+            icon={links[0].icon}
+            size="2x"
+          />
+        </li>
+
+        <li className="github-link">
+          <Link
+            key={links[1].key}
+            name={links[1].name}
+            link={links[1].link}
+            icon={links[1].icon}
+            size="2x"
+          />
+        </li>
       </ul>
     </NavStyles>
   );

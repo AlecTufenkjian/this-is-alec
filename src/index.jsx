@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react';
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import GlobalStyles from './styles/GlobalStyle';
@@ -14,5 +14,5 @@ root.render(
     <Typography />
     <App />
     <Footer />
-  </StrictMode>
+  </StrictMode>,
 );

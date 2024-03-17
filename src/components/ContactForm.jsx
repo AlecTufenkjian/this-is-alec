@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 const FormStyle = styled.form`
@@ -7,7 +7,7 @@ const FormStyle = styled.form`
     width: 100%;
     margin-bottom: 2rem;
   }
-  .form-group-message{
+  .form-group-message {
     width: 100%;
     margin-bottom: 0rem;
   }
@@ -30,7 +30,7 @@ const FormStyle = styled.form`
     min-height: 250px;
     resize: vertical;
   }
-  .character-limit{
+  .character-limit {
     text-align: right;
     margin-bottom: 2rem;
   }
@@ -46,8 +46,8 @@ const FormStyle = styled.form`
     cursor: pointer;
   }
 
-  em{
-    font-style: normal; 
+  em {
+    font-style: normal;
     color: var(--steel-teal);
   }
 
@@ -57,85 +57,84 @@ const FormStyle = styled.form`
   }
 `;
 
-
 export default function ContactForm() {
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = (evt) => {
-    evt.preventDefault(); 
+    evt.preventDefault();
 
-    if(message.length === 0) {
-      alert("Write something!");
+    if (message.length === 0) {
+      alert('Write something!');
       return;
     }
 
     fetch('.netlify/functions/contact_me_via_discord', {
       method: 'POST',
       body: JSON.stringify({
-        "title": name,
-        "message": message,
-        "email": email
+        title: name,
+        message: message,
+        email: email,
       }),
       headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then( () => { 
-      setName("");
-      setEmail("");
-      setMessage("");
-    })
-  }
+        'Content-Type': 'application/json',
+      },
+    }).then(() => {
+      setName('');
+      setEmail('');
+      setMessage('');
+    });
+  };
 
   return (
     <>
       <FormStyle>
-          <div className="form-group">
-            <label htmlFor="name">
-              Your Name <em>(Optional)</em>
-              <input
-                maxLength={50}
-                type="text"
-                id="name"
-                name="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                autoComplete='on'
-              />
-            </label>
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">
-              Your Contact Info <em>(Optional)</em>
-              <input
-                maxLength={50}
-                type="email"
-                id="email"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                autoComplete='on'
-              />
-            </label>
-          </div>
-          <div className="form-group-message">
-            <label htmlFor="message">
-              Your Message
-              <textarea
-                maxLength={2000}
-                type="text"
-                id="message"
-                name="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              />
-            </label>
-          </div>
-          <div className='character-limit'>{message.length}/2000</div>
-          <button type="submit" onClick={handleSubmit}>Send</button>
+        <div className="form-group">
+          <label htmlFor="name">
+            Your Name <em>(Optional)</em>
+            <input
+              maxLength={50}
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              autoComplete="on"
+            />
+          </label>
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">
+            Your Contact Info <em>(Optional)</em>
+            <input
+              maxLength={50}
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              autoComplete="on"
+            />
+          </label>
+        </div>
+        <div className="form-group-message">
+          <label htmlFor="message">
+            Your Message
+            <textarea
+              maxLength={2000}
+              type="text"
+              id="message"
+              name="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+          </label>
+        </div>
+        <div className="character-limit">{message.length}/2000</div>
+        <button type="submit" onClick={handleSubmit}>
+          Send
+        </button>
       </FormStyle>
     </>
   );

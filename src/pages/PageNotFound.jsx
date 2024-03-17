@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import PageNotFoundSVG from '../assets/icons/page-not-found.svg?react';
 

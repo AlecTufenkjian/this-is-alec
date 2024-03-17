@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import ContactForm from './ContactForm';
 
@@ -31,15 +30,15 @@ const ContactSectionStyle = styled.div`
     border-radius: 12px;
     /* padding-left: 3rem; */
 
-  .letter {
-    font-size: 1.8rem;
-  }
+    .letter {
+      font-size: 1.8rem;
+    }
 
-  em{
-    font-style: normal; 
-    font-weight: 500;
-    color: var(--steel-teal);
-  }
+    em {
+      font-style: normal;
+      font-weight: 500;
+      color: var(--steel-teal);
+    }
   }
   @media only screen and (max-width: 768px) {
     .contactSection__wrapper {
@@ -79,13 +78,11 @@ const SectionTitleStyle = styled.div`
   }
 `;
 
-
-
 export default function ContactSection() {
   return (
     <>
       <ContactSectionStyle>
-        <div className="container">   
+        <div className="container">
           <SectionTitleStyle className="section-title">
             <p>get in touch</p>
             <h2>contact</h2>
@@ -93,30 +90,30 @@ export default function ContactSection() {
           <div className="contactSection__wrapper">
             <div className="left">
               <ContactForm />
-            </div>          
+            </div>
             <div className="right">
-              <div className='letter'>
-                Hello there!<br/><br/>
-
-                If you enjoyed browsing my website or have any <em>feedback</em>, I'd love to <em>hear</em> from <em>you</em>!
-                <br/><br/>
-                
-                Feel free to drop me a message using this <em>form</em>, and it will instantly ping me on <em>Discord</em>.
-                <br/><br/>
-
-                You're welcome to share your thoughts <em>anonymously</em> if you prefer.
-                <br/><br/>
-
+              <div className="letter">
+                Hello there!
+                <br />
+                <br />
+                If you enjoyed browsing my website or have any <em>feedback</em>
+                , I`&apos;`d love to <em>hear</em> from <em>you</em>!
+                <br />
+                <br />
+                Feel free to drop me a message using this <em>form</em>, and it
+                will instantly ping me on <em>Discord</em>.
+                <br />
+                <br />
+                You`&apos;`re welcome to share your thoughts <em>anonymously</em> if
+                you prefer.
+                <br />
+                <br />
                 Thanks!
-
               </div>
             </div>
           </div>
         </div>
       </ContactSectionStyle>
     </>
-
   );
 }
-
-

@@ -1,32 +1,20 @@
-import React from 'react';
 import styled from 'styled-components';
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { Link } from './Link'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { Link } from './Link';
 import DATA from '../assets/content/links.json';
 
-import {
-	faGithub,
-	faLinkedin
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-import {
-	faEnvelope,
-	faFileAlt
-} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faFileAlt } from '@fortawesome/free-solid-svg-icons';
 
-library.add(
-  faGithub,
-	faLinkedin,
-  faEnvelope,
-	faFileAlt,
-)
+library.add(faGithub, faLinkedin, faEnvelope, faFileAlt);
 
 const HeroStyle = styled.div`
-  .hero-container{
+  .hero-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 
     width: 100%;
     height: 100vh;
@@ -34,7 +22,7 @@ const HeroStyle = styled.div`
     border-top: 0.4rem solid var(--gunmetal);
   }
 
-  .titles{
+  .titles {
     display: flex;
     flex-flow: column;
     align-self: flex-start;
@@ -44,43 +32,48 @@ const HeroStyle = styled.div`
     gap: 10px;
   }
 
-  .titles div::before{   
-    content: "";
+  .titles div::before {
+    content: '';
     width: 15%;
     max-width: 100px;
     height: 1px;
     background: #fff;
-    transition: all .3s;
+    transition: all 0.3s;
     color: white;
   }
 
-  .title-1{
+  .title-1 {
     font-weight: 700;
     font-size: 1.5rem;
-    font-family: "Heebo",sans-serif;
+    font-family: 'Heebo', sans-serif;
     word-spacing: 10px;
     margin-left: 1%;
   }
 
-  .title-2{
-    background-image: linear-gradient(to right, #2193b0 , #6dd5ed, var(--steel-teal));
+  .title-2 {
+    background-image: linear-gradient(
+      to right,
+      #2193b0,
+      #6dd5ed,
+      var(--steel-teal)
+    );
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; 
-    background-size: 300%;    
+    color: transparent;
+    background-size: 300%;
     animation: animatedText 3s infinite alternate-reverse;
 
     font-weight: 700;
     font-size: 4rem;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
   }
 
-  @keyframes animatedText{
-    from{
+  @keyframes animatedText {
+    from {
       background-position: 0%;
     }
 
-    to{
+    to {
       background-position: 100%;
     }
   }
@@ -95,12 +88,12 @@ const HeroStyle = styled.div`
     height: 150px;
     margin-top: 40px;
 
-    .link {   
+    .link {
       display: flex;
       flex-direction: column;
       justify-content: center;
       width: 100px;
-      
+
       .fa {
         margin-left: 12px;
         margin-right: 12px;
@@ -112,7 +105,10 @@ const HeroStyle = styled.div`
         font-size: 14px;
         text-align: center;
         opacity: 0;
-        transition: visibility 0s, opacity 0.2s, margin 0.2s ease-in-out;
+        transition:
+          visibility 0s,
+          opacity 0.2s,
+          margin 0.2s ease-in-out;
       }
 
       &:hover {
@@ -124,18 +120,18 @@ const HeroStyle = styled.div`
       }
     }
   }
-    
+
   @media only screen and (max-width: 400px) {
-    .titles div::before{
+    .titles div::before {
       left: 180px;
     }
-    .title-1{
+    .title-1 {
       font-size: 1.125rem;
     }
-    .title-2{
+    .title-2 {
       font-size: 3rem;
     }
-    .links{
+    .links {
       justify-content: center;
     }
   }
@@ -143,47 +139,51 @@ const HeroStyle = styled.div`
 
 const links = [
   {
-      key: 1,
-      name: "Resume",
-      link: DATA.LINK_RESUME,
-      icon: ['fas', 'file-alt']
+    key: 1,
+    name: 'Resume',
+    link: DATA.LINK_RESUME,
+    icon: ['fas', 'file-alt'],
   },
   {
-      key: 2,
-      name: "LinkedIn",
-      link: DATA.LINK_LINKEDIN,
-      icon: ['fab', 'linkedin'],
+    key: 2,
+    name: 'LinkedIn',
+    link: DATA.LINK_LINKEDIN,
+    icon: ['fab', 'linkedin'],
   },
   {
-      key: 3,
-      name: "GitHub",
-      link: DATA.LINK_GITHUB,
-      icon: ['fab', 'github'],
+    key: 3,
+    name: 'GitHub',
+    link: DATA.LINK_GITHUB,
+    icon: ['fab', 'github'],
   },
   {
-      key: 4,
-      name: "Email",
-      link: null,
-      copy: DATA.EMAIL,
-      icon: ['fas', 'envelope'],
-  }
-]
+    key: 4,
+    name: 'Email',
+    link: null,
+    copy: DATA.EMAIL,
+    icon: ['fas', 'envelope'],
+  },
+];
 
 export default function HeroSection() {
-
   return (
     <HeroStyle>
-      <div className='hero-container'>
-        <div className='titles'>
-          <div className='title-1'>I AM ALEC TUFENKJIAN</div>
-          <div className='title-2'>SOFTWARE ENGINEERING STUDENT</div>
+      <div className="hero-container">
+        <div className="titles">
+          <div className="title-1">I AM ALEC TUFENKJIAN</div>
+          <div className="title-2">SOFTWARE ENGINEERING STUDENT</div>
         </div>
         <div className="links">
-          {
-            links.map( (link) => 
-              <Link key={link.key} name={link.name} link={link.link} icon={link.icon} copy={link.copy} size="4x"/>
-            )
-          }
+          {links.map((link) => (
+            <Link
+              key={link.key}
+              name={link.name}
+              link={link.link}
+              icon={link.icon}
+              copy={link.copy}
+              size="4x"
+            />
+          ))}
         </div>
       </div>
     </HeroStyle>

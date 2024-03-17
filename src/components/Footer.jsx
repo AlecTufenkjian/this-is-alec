@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const FooterStyle = styled.div`
@@ -17,7 +16,7 @@ export default function Footer() {
     <FooterStyle>
       <div className="copyright">
         <div className="container">
-            © {new Date().getFullYear()} - Alec Tufenkjian
+          © {new Date().getFullYear()} - Alec Tufenkjian
         </div>
       </div>
     </FooterStyle>
