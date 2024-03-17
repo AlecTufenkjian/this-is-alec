@@ -22,6 +22,7 @@ const AboutSectionStyle = styled.div`
     padding-top: 10rem;
     position: relative;
     max-width: 1300px;
+    grow: 1;
   }
 
   .title-1 {
@@ -46,7 +47,7 @@ const AboutSectionStyle = styled.div`
   .left,
   .right {
     width: 100%;
-    max-width: 600px; /* Adjust as needed */
+    max-width: 600px;
   }
 
   .letter {
@@ -87,6 +88,12 @@ const AboutSectionStyle = styled.div`
       max-width: 50%;
     }
   }
+
+  @media only screen and (max-width: 700px) {
+    .left,
+    .right {
+      max-width: 80vw;
+    }
 `;
 
 export default function AboutSection() {

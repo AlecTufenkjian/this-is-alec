@@ -26,9 +26,6 @@ const NavStyles = styled.nav`
       display: inline-block;
       border-radius: 8px;
       transition: 0.3s ease background-color;
-      &:hover {
-        background-color: var(--gunmetal);
-      }
     }
     a {
       display: inline-block;
@@ -69,6 +66,10 @@ const NavStyles = styled.nav`
   ul {
     display: flex;
     justify-content: center;
+  }
+
+  li:hover{
+    background-color: var(--gunmetal);
   }
 
   .github-link {
@@ -112,6 +113,10 @@ const NavStyles = styled.nav`
       li {
         display: block;
         margin-bottom: 1rem;
+      }
+
+      li:hover{
+        background-color: var(--gray);
       }
     }
 
