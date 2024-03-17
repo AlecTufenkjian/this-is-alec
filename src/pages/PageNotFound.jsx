@@ -12,6 +12,10 @@ const Container = styled.div`
 const ContentContainer = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 const TextContainer = styled.div`
