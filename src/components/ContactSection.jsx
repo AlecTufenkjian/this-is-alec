@@ -28,7 +28,6 @@ const ContactSectionStyle = styled.div`
     max-width: 500px;
     width: 100%;
     border-radius: 12px;
-    /* padding-left: 3rem; */
 
     .letter {
       font-size: 1.8rem;
@@ -39,6 +38,9 @@ const ContactSectionStyle = styled.div`
       font-weight: 500;
       color: var(--steel-teal);
     }
+  }
+  p {
+    margin-bottom: 3rem;
   }
   @media only screen and (max-width: 768px) {
     .contactSection__wrapper {
@@ -93,22 +95,21 @@ export default function ContactSection() {
             </div>
             <div className="right">
               <div className="letter">
-                Hello there!
-                <br />
-                <br />
-                If you enjoyed browsing my website or have any <em>feedback</em>
-                , I&apos;d love to <em>hear</em> from <em>you</em>!
-                <br />
-                <br />
-                Feel free to drop me a message using this <em>form</em>, and it
-                will instantly ping me on <em>Discord</em>.
-                <br />
-                <br />
-                You&apos;re welcome to share your thoughts <em>anonymously</em> if
-                you prefer.
-                <br />
-                <br />
-                Thanks!
+                <p>Hello there!</p>
+                <p>
+                  If you enjoyed browsing my website or have any{' '}
+                  <em>feedback</em>, I&apos;d love to <em>hear</em> from{' '}
+                  <em>you</em>!
+                </p>
+                <p>
+                  Feel free to drop me a message using this <em>form</em>, and
+                  it will instantly ping me on <em>Discord</em>.
+                </p>
+                <p>
+                  You&apos;re welcome to share your thoughts{' '}
+                  <em>anonymously</em> if you prefer.
+                </p>
+                <p>Thanks!</p>
               </div>
             </div>
           </div>

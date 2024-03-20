@@ -59,6 +59,10 @@ const AboutSectionStyle = styled.div`
     margin-bottom: 3rem;
   }
 
+  .letter p {
+    margin-bottom: 3rem;
+  }
+
   .letter-header {
     font-size: 3rem;
   }
@@ -114,12 +118,12 @@ export default function AboutSection() {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 1
+      items: 1,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1    
-    }
+      items: 1,
+    },
   };
 
   return (
@@ -127,16 +131,30 @@ export default function AboutSection() {
       <div className="about-container">
         <div className="contactSection__wrapper">
           <div className="left">
-            <div className="title-1"> Back-End Developer </div>{' '}
+            <div className="title-1"> Back-End Developer </div>
             <div className="title-2"> About Me </div> <div className="line" />
             <div className="letter">
-              Hello, and thanks for stopping by!
-              <br /> <br /> 
-              I&apos;m an enthusiastic Software Engineering student at <em>McGill University</em>, with a knack for building robust <em>back-end solutions</em>. 
-              <br /> <br />
-              Having been hands-on with projects involving <em>SaaS</em>, <em> Serverless services</em>, <em>E-Commerce apps</em>, and <em>CRM solutions</em>, I&apos;ve developed a solid grasp of <em>Agile</em> methodologies & Scrum practices. 
-              <br /> <br />
-              My toolbox includes a mix of <em>Java</em>, <em>JavaScript</em>, <em>Python</em>, <em>Ruby</em>, and cloud computing services like <em> AWS </em> and <em>GCP</em>. <br /> <br /> I&apos;m also fluent in <em>English</em>, <em>French</em>, <em>Arabic</em>, and native in <em>Armenian</em>.
+              <p>Hello, and thanks for stopping by!</p>
+              <p>
+                I&apos;m an enthusiastic Software Engineering student at{' '}
+                <em>McGill University</em>, with a knack for building robust{' '}
+                <em>back-end solutions</em>.
+              </p>
+              <p>
+                Having been hands-on with projects involving <em>SaaS</em>,{' '}
+                <em> Serverless services</em>, <em>E-Commerce apps</em>, and{' '}
+                <em>CRM solutions</em>, I&apos;ve developed a solid grasp of{' '}
+                <em>Agile</em> methodologies & Scrum practices.
+              </p>
+              <p>
+                My toolbox includes a mix of <em>Java</em>, <em>JavaScript</em>,{' '}
+                <em>Python</em>, <em>Ruby</em>, and cloud computing services
+                like <em> AWS </em> and <em>GCP</em>. 
+              </p> 
+              <p>
+                I&apos;m also fluent in <em>English</em>, <em>French</em>,{' '}
+                <em>Arabic</em>, and native in <em>Armenian</em>.
+              </p>
             </div>
           </div>
           <div className="right">
@@ -147,13 +165,21 @@ export default function AboutSection() {
               autoPlaySpeed={4000}
               swipeable={false}
               draggable={false}
-              removeArrowOnDeviceType={["mobile"]}
+              removeArrowOnDeviceType={['mobile']}
             >
               <div>
-                <img className="image" src={timesquare1} alt="Time Square Official" />
+                <img
+                  className="image"
+                  src={timesquare1}
+                  alt="Time Square Official"
+                />
               </div>
               <div>
-                <img className="image" src={timesquare2} alt="Time Square Livestream" />
+                <img
+                  className="image"
+                  src={timesquare2}
+                  alt="Time Square Livestream"
+                />
               </div>
             </Carousel>
           </div>
