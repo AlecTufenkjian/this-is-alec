@@ -53,15 +53,16 @@ const HeroStyle = styled.div`
   .title-2 {
     background-image: linear-gradient(
       to right,
-      #2193b0,
-      #6dd5ed,
+      #06556a, 
+      #7ed8ed,
+      #00796B,
       var(--steel-teal)
     );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     background-size: 300%;
-    animation: animatedText 3s infinite alternate-reverse;
+    animation: animatedText 2s infinite alternate-reverse;
 
     font-weight: 700;
     font-size: 4rem;

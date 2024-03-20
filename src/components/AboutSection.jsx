@@ -75,7 +75,10 @@ const AboutSectionStyle = styled.div`
 
   .image {
     width: 100%;
-    border-radius: 12px;
+  }
+
+  .react-multi-carousel-list {
+    border-radius: 20px;
   }
 
   @media only screen and (min-width: 1400px) {
@@ -90,9 +93,16 @@ const AboutSectionStyle = styled.div`
   }
 
   @media only screen and (max-width: 700px) {
-    .left,
-    .right {
-      max-width: 90vw;
+    .left{
+      max-width: 85vw;
+    }
+
+    .right{
+      max-width: 95vw;
+    }
+
+    .about-container {
+      padding-bottom: 2rem;
     }
 `;
 
@@ -117,7 +127,7 @@ export default function AboutSection() {
       <div className="about-container">
         <div className="contactSection__wrapper">
           <div className="left">
-            <div className="title-1"> Back - End Developer </div>{' '}
+            <div className="title-1"> Back-End Developer </div>{' '}
             <div className="title-2"> About Me </div> <div className="line" />
             <div className="letter">
               Hello, and thanks for stopping by!
