@@ -1,15 +1,12 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "This is Alec",
+  "name": "This is Alec Tufenkjian",
   "icons": [
     {
       "src": "icon.png",
       "type": "image/png",
-      "sizes": "500x500"
+      "sizes": "48x48"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "start_url": "."
 }
