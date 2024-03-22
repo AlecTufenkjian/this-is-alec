@@ -134,26 +134,36 @@ export default function AboutSection() {
             <div className="title-1"> Back-End Developer </div>
             <div className="title-2"> About Me </div> <div className="line" />
             <div className="letter">
-              <p>Hello, and thanks for stopping by!</p>
               <p>
-                I&apos;m an enthusiastic Software Engineering student at{' '}
-                <em>McGill University</em>, with a knack for building robust{' '}
-                <em>back-end solutions</em>.
+                Hello, and <em>thank you</em> for visiting!
+              </p>
+              <p>
+                I&apos;m a passionate <em>Software Engineering</em> student at{' '}
+                <em>McGill University</em>, dedicated to crafting robust
+                back-end solutions.
               </p>
               <p>
                 Having been hands-on with projects involving <em>SaaS</em>,{' '}
-                <em> Serverless services</em>, <em>E-Commerce apps</em>, and{' '}
-                <em>CRM solutions</em>, I&apos;ve developed a solid grasp of{' '}
-                <em>Agile</em> methodologies & Scrum practices.
+                <em> Serverless services</em>, and <em>E-Commerce apps</em>,
+                I&apos;ve developed a solid grasp of <em>Agile</em>{' '}
+                methodologies & <em>Scrum</em> practices.
               </p>
               <p>
-                My toolbox includes a mix of <em>Java</em>, <em>JavaScript</em>,{' '}
-                <em>Python</em>, <em>Ruby</em>, and cloud computing services
-                like <em> AWS </em> and <em>GCP</em>. 
-              </p> 
+                My toolkit comprises a blend of <em>Java</em>,{' '}
+                <em>JavaScript</em>, <em>Python</em>, <em>Ruby</em>, and
+                proficiency in leveraging cloud computing services such as{' '}
+                <em>AWS</em> and <em>GCP</em>. Moreover, I&apos;m fluent in
+                English, French, Arabic, and Armenian.
+              </p>
               <p>
-                I&apos;m also fluent in <em>English</em>, <em>French</em>,{' '}
-                <em>Arabic</em>, and native in <em>Armenian</em>.
+                Throughout my journey, I&apos;ve had the privilege of
+                contributing to entreprise projects, such as Morgan
+                Stanley&apos;s <em>Shareworks</em> platform within{' '}
+                <em>Wealth Management</em>, an <em>equity compensation</em>{' '}
+                solution utilized by many of the world&apos;s largest companies.
+                I also collaborated on Garda&apos;s <em>Crisis24</em>, a leading{' '}
+                <em>risk management</em> solution serving the world&apos;s most
+                influential individuals.
               </p>
             </div>
           </div>
