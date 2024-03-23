@@ -138,22 +138,22 @@ export default function AboutSection() {
                 Hello, and <em>thank you</em> for visiting!
               </p>
               <p>
-                I&apos;m a passionate <em>Software Engineering</em> student at{' '}
-                <em>McGill University</em>, dedicated to crafting robust
-                back-end solutions.
+                I&apos;m a <em>Software Engineering</em> student at{' '}
+                <em>McGill University</em>, dedicated to crafting back-end
+                solutions.
               </p>
               <p>
                 Having been hands-on with projects involving <em>SaaS</em>,{' '}
                 <em> Serverless services</em>, and <em>E-Commerce apps</em>,
                 I&apos;ve developed a solid grasp of <em>Agile</em>{' '}
-                methodologies & <em>Scrum</em> practices.
+                methodologies.
               </p>
               <p>
                 My toolkit comprises a blend of <em>Java</em>,{' '}
                 <em>JavaScript</em>, <em>Python</em>, <em>Ruby</em>, and
                 proficiency in leveraging cloud computing services such as{' '}
-                <em>AWS</em> and <em>GCP</em>. Moreover, I&apos;m fluent in
-                English, French, Arabic, and Armenian.
+                <em>GCP</em>. Moreover, I&apos;m fluent in English, French,
+                Arabic, and Armenian.
               </p>
               <p>
                 Throughout my journey, I&apos;ve had the privilege of
