@@ -7,7 +7,6 @@ const FooterStyle = styled.div`
     background-color: var(--dark-gray);
     text-align: left;
     padding: 1rem 0;
-    margin-top: 5rem;
   }
 `;
 

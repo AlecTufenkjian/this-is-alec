@@ -17,18 +17,19 @@ const HeroStyle = styled.div`
     align-items: center;
 
     width: 100%;
-    height: 100vh;
+    height: 92vh;
     background-color: var(--black);
     border-top: 0.4rem solid var(--gunmetal);
+    gap: 50px;
   }
 
   .titles {
     display: flex;
     flex-flow: column;
-    align-self: flex-start;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     gap: 10px;
   }
 
@@ -46,8 +47,8 @@ const HeroStyle = styled.div`
     font-weight: 700;
     font-size: 1.5rem;
     font-family: 'Heebo', sans-serif;
-    word-spacing: 10px;
-    margin-left: 1%;
+    word-spacing: 5px;
+    text-align: center;
   }
 
   .title-2 {
@@ -67,6 +68,7 @@ const HeroStyle = styled.div`
     font-weight: 700;
     font-size: 4rem;
     font-family: 'Oswald', sans-serif;
+    word-spacing: 10px;
   }
 
   @keyframes animatedText {
@@ -87,7 +89,6 @@ const HeroStyle = styled.div`
 
     width: 90%;
     height: 150px;
-    margin-top: 40px;
 
     .link {
       display: flex;
@@ -122,10 +123,7 @@ const HeroStyle = styled.div`
     }
   }
 
-  @media only screen and (max-width: 400px) {
-    .titles div::before {
-      left: 180px;
-    }
+  @media only screen and (max-width: 500px) {
     .title-1 {
       font-size: 1.125rem;
     }
@@ -171,8 +169,8 @@ export default function HeroSection() {
     <HeroStyle>
       <div className="hero-container">
         <div className="titles">
-          <div className="title-1">I AM ALEC TUFENKJIAN</div>
-          <div className="title-2">SOFTWARE ENGINEERING STUDENT</div>
+          <div className="title-2">ALEC TUFENKJIAN</div>
+          <div className="title-1">SOFTWARE ENGINEERING STUDENT</div>
         </div>
         <div className="links">
           {links.map((link) => (

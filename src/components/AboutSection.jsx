@@ -8,7 +8,7 @@ const AboutSectionStyle = styled.div`
   .about-container {
     width: 100%;
     background: var(--dark-gray);
-    padding-bottom: 10rem;
+    padding-bottom: 0rem;
     border-top: 0.3rem solid var(--gunmetal);
     display: flex;
     justify-content: center;
@@ -156,12 +156,12 @@ export default function AboutSection() {
                 Arabic, and Armenian.
               </p>
               <p>
-                Throughout my journey, I&apos;ve had the privilege of
-                contributing to entreprise projects, such as Morgan
-                Stanley&apos;s <em>Shareworks</em> platform within{' '}
-                <em>Wealth Management</em>, an <em>equity compensation</em>{' '}
-                solution utilized by many of the world&apos;s largest companies.
-                I also collaborated on Garda&apos;s <em>Crisis24</em>, a leading{' '}
+                I&apos;ve had the privilege of contributing to entreprise
+                projects, such as Morgan Stanley&apos;s <em>Shareworks</em>{' '}
+                platform within <em>Wealth Management</em>, an{' '}
+                <em>equity compensation</em> solution utilized by many of the
+                world&apos;s largest companies. I also collaborated on
+                Garda&apos;s <em>Crisis24</em>, a leading{' '}
                 <em>risk management</em> solution serving the world&apos;s most
                 influential individuals.
               </p>

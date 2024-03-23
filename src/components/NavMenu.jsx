@@ -68,7 +68,7 @@ const NavStyles = styled.nav`
     justify-content: center;
   }
 
-  li:hover{
+  li:hover {
     background-color: var(--gunmetal);
   }
 
@@ -81,6 +81,11 @@ const NavStyles = styled.nav`
     position: absolute;
     right: 80px;
   }
+
+  .mobile-links {
+    display: none;
+  }
+
   @media only screen and (max-width: 768px) {
     padding: 0;
     .hide-item {
@@ -115,15 +120,19 @@ const NavStyles = styled.nav`
         margin-bottom: 1rem;
       }
 
-      li:hover{
+      li:hover {
         background-color: var(--gray);
       }
     }
 
     .linkedin-link,
     .github-link {
-      position: initial;
-      display: inline-block !important;
+      display: none !important;
+    }
+
+    .mobile-links .link {
+      margin-right: 10px;
+      margin-left: 10px;
     }
   }
 `;
@@ -201,6 +210,23 @@ export default function NavMenu() {
         </li>
 
         <li className="github-link">
+          <Link
+            key={links[1].key}
+            name={links[1].name}
+            link={links[1].link}
+            icon={links[1].icon}
+            size="2x"
+          />
+        </li>
+
+        <li className="mobile-links">
+          <Link
+            key={links[0].key}
+            name={links[0].name}
+            link={links[0].link}
+            icon={links[0].icon}
+            size="2x"
+          />
           <Link
             key={links[1].key}
             name={links[1].name}
