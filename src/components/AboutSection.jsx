@@ -8,7 +8,6 @@ const AboutSectionStyle = styled.div`
   .about-container {
     width: 100%;
     background: var(--dark-gray);
-    padding-bottom: 0rem;
     border-top: 0.3rem solid var(--gunmetal);
     display: flex;
     justify-content: center;
@@ -103,10 +102,6 @@ const AboutSectionStyle = styled.div`
 
     .right{
       max-width: 95vw;
-    }
-
-    .about-container {
-      padding-bottom: 2rem;
     }
 `;
 

@@ -19,8 +19,8 @@ const NavStyles = styled.nav`
   padding: 1rem 0;
   background: var(--dark-gray);
 
-  ul {
-    li {
+  .list {
+    .list-item {
       margin-right: 1rem;
       margin-left: 1rem;
       display: inline-block;
@@ -63,12 +63,12 @@ const NavStyles = styled.nav`
     display: none;
   }
 
-  ul {
+  .list {
     display: flex;
     justify-content: center;
   }
 
-  li:hover {
+  .list-item:hover {
     background-color: var(--gunmetal);
   }
 
@@ -80,10 +80,6 @@ const NavStyles = styled.nav`
   .linkedin-link {
     position: absolute;
     right: 80px;
-  }
-
-  .mobile-links {
-    display: none;
   }
 
   @media only screen and (max-width: 768px) {
@@ -115,12 +111,12 @@ const NavStyles = styled.nav`
           pointer-events: none;
         }
       }
-      li {
+      .list-item {
         display: block;
         margin-bottom: 1rem;
       }
 
-      li:hover {
+      .list-item:hover {
         background-color: var(--gray);
       }
     }
@@ -128,11 +124,6 @@ const NavStyles = styled.nav`
     .linkedin-link,
     .github-link {
       display: none !important;
-    }
-
-    .mobile-links .link {
-      margin-right: 10px;
-      margin-left: 10px;
     }
   }
 `;
@@ -166,7 +157,7 @@ export default function NavMenu() {
         <MdMenu />
       </div>
 
-      <ul className={!showNav ? 'navItems hide-item' : 'navItems'}>
+      <div className={!showNav ? 'navItems hide-item list' : 'navItems list'}>
         <div
           className="closeNavIcon"
           onClick={() => setShowNav(!showNav)}
@@ -176,7 +167,7 @@ export default function NavMenu() {
         >
           <MdClose />
         </div>
-        <li>
+        <div className="list-item">
           <NavLink
             to="/"
             onClick={() => setShowNav(!showNav)}
@@ -186,8 +177,8 @@ export default function NavMenu() {
           >
             Home
           </NavLink>
-        </li>
-        <li>
+        </div>
+        <div className="list-item">
           <NavLink
             to="/contact"
             onClick={() => setShowNav(!showNav)}
@@ -197,9 +188,9 @@ export default function NavMenu() {
           >
             Contact
           </NavLink>
-        </li>
+        </div>
 
-        <li className="linkedin-link">
+        <div className="linkedin-link list-item">
           <Link
             key={links[0].key}
             name={links[0].name}
@@ -207,9 +198,9 @@ export default function NavMenu() {
             icon={links[0].icon}
             size="2x"
           />
-        </li>
+        </div>
 
-        <li className="github-link">
+        <div className="github-link list-item">
           <Link
             key={links[1].key}
             name={links[1].name}
@@ -217,25 +208,8 @@ export default function NavMenu() {
             icon={links[1].icon}
             size="2x"
           />
-        </li>
-
-        <li className="mobile-links">
-          <Link
-            key={links[0].key}
-            name={links[0].name}
-            link={links[0].link}
-            icon={links[0].icon}
-            size="2x"
-          />
-          <Link
-            key={links[1].key}
-            name={links[1].name}
-            link={links[1].link}
-            icon={links[1].icon}
-            size="2x"
-          />
-        </li>
-      </ul>
+        </div>
+      </div>
     </NavStyles>
   );
 }

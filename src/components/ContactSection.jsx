@@ -42,6 +42,10 @@ const ContactSectionStyle = styled.div`
   p {
     margin-bottom: 3rem;
   }
+
+  .get-in-touch {
+    margin-bottom: 1rem;
+  }
   @media only screen and (max-width: 768px) {
     .contactSection__wrapper {
       flex-direction: column-reverse;
@@ -86,7 +90,7 @@ export default function ContactSection() {
       <ContactSectionStyle>
         <div className="container">
           <SectionTitleStyle className="section-title">
-            <p>get in touch</p>
+            <p className="get-in-touch">get in touch</p>
             <h2>contact</h2>
           </SectionTitleStyle>
           <div className="contactSection__wrapper">
